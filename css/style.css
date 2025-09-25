@@ -1,6 +1,14 @@
+background: #4f4f4f;
+
+p {
+  text-align: center;
+  color: #fff;
+}
+
 footer {
   text-align: center;
   padding: 5px;
   background-color: #000000;
   color: #fff;
 }
+
