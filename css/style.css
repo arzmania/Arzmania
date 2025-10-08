@@ -1,65 +1,13 @@
-body {
-  background: linear-gradient(0.25turn, rgba(46, 39, 177, 0.5), rgba(104, 18, 1280.5));
+background: #4f4f4f;
+
+p {
+  text-align: center;
+  color: #fff;
 }
 
 footer {
   text-align: center;
   padding: 5px;
-  background: linear-gradient(0.25turn, rgb(100, 100, 100), rgb(48, 48, 48));
+  background-color: #000000;
   color: #fff;
-  position: absolute; bottom :0; left:0; right:0;
-}
-
-.sommaire {
-  margin: 10px;
-  height: 50px;
-  width: 150px;
-  font-size: 20px;
-  font: italic small-caps bold 16px/2 cursive;
-  color:rgb(77, 19, 77);
-  background-color: rgb(255, 255, 255);
-  border: 4px outset rgb(201, 67, 246);
-  border-radius: 13px;
-  box-shadow:0 5px rgba(79, 79, 79, 0.9);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-}
-
-header {
-  /* background-image: url(""); */
-  /* background: linear-gradient(0.25turn, rgba(255, 162, 0, 0.9), rgba(255, 0, 0, 0.9)); */
-  border-radius: 13px;
-  height: 100px;
-  background-size: cover;  
-  background-repeat: no-repeat;
-  background-position:center;
-}
-
-summary {
-  font-size: 30px;
-  cursor: pointer;
-
-  list-style: none;
-}
-
-details[open] {
-  backdrop-filter: saturate(0);
-  max-width: 300px;
-  position: absolute;
-}
-
-details[open] summary::after{
-  content: "➖";
-}
-
-summary::after{
-  content:"➕";
-}
-
-.pres {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
