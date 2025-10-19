@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arzmania - Carte</title>
+    <link rel="stylesheet" href="../css/Navbar.css">
+    <link rel="stylesheet" href="../css/Carte.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <main class="carte-main">
+        <section class="carte-section">
+            <div class="container">
+                <h1>Carte d'Arzmania</h1>
+                <p class="carte-intro">Explorez les différentes régions du royaume</p>
+
+                <div class="carte-wrapper">
+                    <div class="carte-container">
+                        <img src="../img/carte-arzmania.jpg" alt="Carte Arzmania" class="carte-image">
+                        
+                        <div class="zone zone-minas" data-region="minas"></div>
+                        <div class="zone zone-ridranthic" data-region="ridranthic"></div>
+                        <div class="zone zone-galadhbo" data-region="galadhbo"></div>
+                        <div class="zone zone-lin" data-region="lin"></div>
+                        <div class="zone zone-arzmania" data-region="arzmania"></div>
+                        <div class="zone zone-mesthoman" data-region="mesthoman"></div>
+                        <div class="zone zone-rogrok" data-region="rogrok"></div>
+                        <div class="zone zone-itris" data-region="itris"></div>
+                        <div class="zone zone-grottes" data-region="grottes"></div>
+                    </div>
+
+                    <div class="regions-list">
+                        <h3>Régions</h3>
+                        <button class="region-btn" data-region="minas">Minas</button>
+                        <button class="region-btn" data-region="ridranthic">Ridranthic</button>
+                        <button class="region-btn" data-region="galadhbo">Galadhbo</button>
+                        <button class="region-btn" data-region="lin">Lin</button>
+                        <button class="region-btn" data-region="arzmania">Arzmania</button>
+                        <button class="region-btn" data-region="mesthoman">Mesthoman</button>
+                        <button class="region-btn" data-region="rogrok">Rogrok</button>
+                        <button class="region-btn" data-region="itris">Itris</button>
+                        <button class="region-btn" data-region="grottes">Grottes d'Asteros</button>
+                    </div>
+                </div>
+
+                <div id="region-info" class="region-info hidden">
+                    <button class="close-btn">&times;</button>
+                    <h2 id="region-title"></h2>
+                    <p id="region-description"></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../js/navbar-loader.js"></script>
+    <script src="../js/Carte.js"></script>
+</body>
+</html>

@@ -1,0 +1,301 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0a0a0a;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.carte-main {
+    margin-top: 100px;
+    padding: 3rem 0;
+}
+
+.carte-section h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: #ab2ffd;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 20px rgba(171, 47, 253, 0.5);
+}
+
+.carte-intro {
+    text-align: center;
+    color: #e0e0e0;
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+}
+
+.carte-wrapper {
+    display: block;
+}
+
+.carte-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto 3rem auto;
+    border: 3px solid #ab2ffd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(171, 47, 253, 0.3);
+}
+
+.carte-image {
+    width: 100%;
+    display: block;
+    opacity: 0.9;
+}
+
+.zone {
+    position: absolute;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+
+.zone-minas {
+    top: 2%;
+    left: 2%;
+    width: 15%;
+    height: 22%;
+}
+
+.zone-ridranthic {
+    top: 2%;
+    left: 20%;
+    width: 20%;
+    height: 18%;
+}
+
+.zone-galadhbo {
+    top: 5%;
+    right: 8%;
+    width: 18%;
+    height: 25%;
+}
+
+.zone-grottes {
+    top: 28%;
+    right: 8%;
+    width: 20%;
+    height: 15%;
+}
+
+.zone-lin {
+    top: 25%;
+    left: 8%;
+    width: 18%;
+    height: 22%;
+}
+
+.zone-arzmania {
+    top: 18%;
+    left: 35%;
+    width: 22%;
+    height: 20%;
+}
+
+.zone-mesthoman {
+    top: 42%;
+    right: 10%;
+    width: 18%;
+    height: 18%;
+}
+
+.zone-rogrok {
+    bottom: 22%;
+    left: 30%;
+    width: 25%;
+    height: 25%;
+}
+
+.zone-itris {
+    bottom: 5%;
+    right: 5%;
+    width: 12%;
+    height: 12%;
+}
+
+/* Liste des boutons de régions */
+.regions-list {
+    max-width: 1200px;
+    margin: 0 auto 3rem auto;
+    padding: 2.5rem;
+    background: rgba(10, 10, 10, 0.6);
+    backdrop-filter: blur(10px);
+    border: 2px solid #ab2ffd;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(171, 47, 253, 0.2);
+}
+
+.regions-list h3 {
+    color: #ab2ffd;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    text-shadow: 0 0 15px rgba(171, 47, 253, 0.8);
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.regions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.2rem;
+}
+
+.region-btn {
+    position: relative;
+    padding: 1.2rem 2rem;
+    background: linear-gradient(145deg, rgba(20, 20, 20, 0.9), rgba(30, 30, 30, 0.9));
+    color: #e0e0e0;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.region-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(171, 47, 253, 0.4), transparent);
+    transition: left 0.5s ease;
+}
+
+.region-btn:hover::before {
+    left: 100%;
+}
+
+.region-btn:hover {
+    background: linear-gradient(145deg, #ab2ffd, #8a24cc);
+    border-color: #c07eec;
+    color: #ffffff;
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 
+        0 15px 35px rgba(171, 47, 253, 0.5),
+        0 0 30px rgba(171, 47, 253, 0.3),
+        inset 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.region-btn:active {
+    transform: translateY(-2px) scale(1.01);
+    box-shadow: 0 8px 20px rgba(171, 47, 253, 0.5);
+}
+
+/* Informations de région */
+.region-info {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 2.5rem;
+    background: linear-gradient(135deg, rgba(171, 47, 253, 0.15), rgba(192, 126, 236, 0.15));
+    backdrop-filter: blur(10px);
+    border: 2px solid #ab2ffd;
+    border-radius: 15px;
+    position: relative;
+    animation: slideIn 0.4s ease;
+    box-shadow: 0 10px 40px rgba(171, 47, 253, 0.3);
+}
+
+.region-info.hidden {
+    display: none;
+}
+
+.close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: linear-gradient(145deg, rgba(171, 47, 253, 0.3), rgba(138, 36, 204, 0.3));
+    border: 2px solid #ab2ffd;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    color: #ab2ffd;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.close-btn:hover {
+    background: linear-gradient(145deg, #ab2ffd, #c07eec);
+    color: #ffffff;
+    transform: rotate(90deg) scale(1.1);
+    box-shadow: 0 0 20px rgba(171, 47, 253, 0.6);
+}
+
+.region-info h2 {
+    color: #ab2ffd;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 15px rgba(171, 47, 253, 0.8);
+    font-weight: 700;
+}
+
+.region-info p {
+    color: #e0e0e0;
+    font-size: 1.15rem;
+    line-height: 1.9;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .carte-section h1 {
+        font-size: 2rem;
+    }
+
+    .regions-list h3 {
+        font-size: 1.5rem;
+    }
+
+    .regions-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .region-info {
+        padding: 1.5rem;
+    }
+
+    .region-info h2 {
+        font-size: 2rem;
+    }
+
+    .region-btn {
+        font-size: 1rem;
+        padding: 1rem 1.5rem;
+    }
+}
