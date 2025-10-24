@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0a0a0a;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.chrono-main {
+    margin-top: 100px;
+    padding: 3rem 0;
+}
+
+.chrono-section h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: #ab2ffd;
+    margin-bottom: 3rem;
+    text-shadow: 0 0 20px rgba(171, 47, 253, 0.5);
+}
+
+.chrono-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #ab2ffd;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 20px rgba(171, 47, 253, 0.5);
+}
+
+.chrono-section p {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+}
+
+.chrono-event p {
+    text-align: left;
+    font-size : 1.1rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+}
+
+.date p{
+    text-align: left;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+}
