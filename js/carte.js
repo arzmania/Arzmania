@@ -1,6 +1,6 @@
 const regions = {
     minas: {
-        title: "Minas",
+        title: "Minas Morgul",
         description: "Autrefois une grande cité peuplé par les Nazguls, cette dernière à été partiellement détruite et abandonnée lors de la Grande Guerre. <br> Elle est située dans les terres du nord, dans une véritable toundra. Des immenses ruines de ce châteaux d'un autre temps surplombes les montagnes autour de la plaine. <br><br> Après la mort de Pharra en l'an 104 AGW, le nouveau Roi des démons, Tom Sammartano, décida de s'allier avec les rares Nazguls toujours en vie. C'est ensemble qu'ils décidèrent de se lancer dans la construction d'un petit village où les survivants Démons et Nazguls pourraient vivre ensemble. <br> Pour l'heure, le village est encore en construction, l'objectif des Démons et des Nazguls et de reconstruire une véritable ville à partir des ruines de Minas Morgul et du nouveau village. Afin de devenir la prochaine grande ville du nord, comme Minas Morgul avait pu l'être autrefois."
     },
     ridranthic: {
