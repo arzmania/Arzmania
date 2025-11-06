@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arzmania - Démon</title>
+    <link rel="stylesheet" href="../../../css/Navbar.css">
+    <link rel="stylesheet" href="demon.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <div class="demonic-background">
+        <div class="blood-drop"></div>
+        <div class="blood-drop"></div>
+        <div class="blood-drop"></div>
+        <div class="blood-drop"></div>
+        <div class="blood-drop"></div>
+        <div class="blood-drop"></div>
+        <div class="dark-flame"></div>
+        <div class="dark-flame"></div>
+        <div class="dark-flame"></div>
+        <div class="dark-flame"></div>
+        <div class="infernal-glow glow1"></div>
+        <div class="infernal-glow glow2"></div>
+        <div class="infernal-glow glow3"></div>
+    </div>
+
+    <main class="race-content">
+        <div class="race-header">
+            <h1 class="race-title">Démon</h1>
+            <p class="race-subtitle"></p>
+        </div>
+
+        <div class="race-body">
+            <div class="race-image-container">
+                <img src="../../../img/races/démon.png" alt="Démon" class="race-image">
+            </div>
+
+            <div class="race-info">
+                <section class="info-section">
+                    <h2>Description</h2>
+                    <p></p>
+                </section>
+
+                <section class="info-section">
+                    <h2>Attributs de Race</h2>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </section>
+
+                <section class="info-section">
+                    <h2>Histoire</h2>
+                    <p></p>
+                </section>
+
+                <section class="info-section">
+                    <h2>Culture</h2>
+                    <p></p>
+                </section>
+            </div>
+        </div>
+
+        <a href="../../Races.html" class="back-button">← Retour aux Races</a>
+    </main>
+
+    <script>
+    fetch('../../navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar-placeholder').innerHTML = data;
+            
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            if (hamburger) {
+                hamburger.addEventListener('click', () => {
+                    navMenu.classList.toggle('active');
+                });
+            }
+            
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

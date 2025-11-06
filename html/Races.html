@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arzmania - Races</title>
+    <link rel="stylesheet" href="../css/Navbar.css">
+    <link rel="stylesheet" href="../css/Races.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <div id="transition-overlay" class="transition-overlay"></div>
+
+    <main class="races-main">
+        <section class="races-hero">
+            <h1>Les races présentes dans le RP</h1>
+            <p class="subtitle">Les Races d'Arzmania</p>
+            <p class="description">Tes terres d'Arzmania sont peuplées de différentes races et espèces diverses et variées. Chacune de ces races ont leur propre histoire et leur propre culture.</p>
+            <p class="instruction">Sélectionne-en une et découvre l'Histoire de la Race</p>
+        </section>
+
+        <section class="races-grid">
+            <div class="race-card" data-race="humain">
+                <div class="race-image">
+                    <img src="../img/races/humain.jpg" alt="Humain">
+                </div>
+                <h3 class="race-name">Humain(e)</h3>
+            </div>
+
+            <div class="race-card" data-race="elfel" onclick="window.location.href='races/elfel/elfel.html'">
+                <div class="race-image">
+                    <img src="../img/races/elfes_lumineux.jpg" alt="Elfe Lumineux">
+                </div>
+                <h3 class="race-name">Elfe Lumineux</h3>
+            </div>
+
+            <div class="race-card" data-race="elfeo" onclick="window.location.href='races/elfeo/elfeo.html'">
+                <div class="race-image">
+                    <img src="../img/races/elfes_obscurs.png" alt="Elfe Obscurs">
+                </div>
+                <h3 class="race-name">Elfes Obscurs</h3>
+            </div>
+
+            <div class="race-card" data-race="fee" onclick="window.location.href='races/fee/fee.html'">
+                <div class="race-image">
+                    <img src="../img/races/fée.jpg" alt="Fée">
+                </div>
+                <h3 class="race-name">Fée</h3>
+            </div>
+
+            <div class="race-card" data-race="magmarien" onclick="window.location.href='races/magmarien/magmarien.html'">
+                <div class="race-image">
+                    <img src="../img/races/magmarien.jpg" alt="magmarien">
+                </div>
+                <h3 class="race-name">Magmarien</h3>
+            </div>
+
+            <div class="race-card" data-race="ondin" onclick="window.location.href='races/ondin/ondin.html'">
+                <div class="race-image">
+                    <img src="../img/races/ondin.jpg" alt="ondin">
+                </div>
+                <h3 class="race-name">Ondin</h3>
+            </div>
+
+            <div class="race-card" data-race="golem" onclick="window.location.href='races/golem/golem.html'">
+                <div class="race-image">
+                    <img src="../img/races/golem de glace.png" alt="Golem de Glace">
+                </div>
+                <h3 class="race-name">Golem de Glace</h3>
+            </div>
+
+            <div class="race-card" data-race="stryx" onclick="window.location.href='races/stryx/stryx.html'">
+                <div class="race-image">
+                    <img src="../img/races/stryx.jpg" alt="stryx">
+                </div>
+                <h3 class="race-name">Stryx</h3>
+            </div>
+
+            <div class="race-card" data-race="nazgul" onclick="window.location.href='races/nazgul/nazgul.html'">    
+                <div class="race-image">
+                    <img src="../img/races/nazgul.jpg" alt="nazgul">
+                </div>
+                <h3 class="race-name">Nazgul</h3>
+            </div>
+
+            <div class="race-card" data-race="démon" onclick="window.location.href='races/demon/demon.html'">
+                <div class="race-image">
+                    <img src="../img/races/démon.png" alt="démon">
+                </div>
+                <h3 class="race-name">Démon</h3>
+            </div>
+
+            <div class="race-card" data-race="arasilien">
+                <div class="race-image">
+                    <img src="../img/races/arasilien.png" alt="arasilien">
+                </div>
+                <h3 class="race-name">Arasilien</h3>
+            </div>
+
+            <div class="race-card" data-race="hybride">
+                <div class="race-image">
+                    <img src="../img/races/hybrides & autres.png" alt="Hybrides & autres">
+                </div>
+                <h3 class="race-name">Hybrides & Espèces ésotériques</h3>
+            </div>
+        </section>
+
+        <div id="race-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div class="modal-body">
+                    <div class="modal-image">
+                        <img id="modal-img" src="" alt="">
+                    </div>
+                    <div class="modal-info">
+                        <h2 id="modal-title"></h2>
+                        <p id="modal-description"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/navbar-loader.js"></script>
+    <script src="../js/Races.js"></script>
+</body>
+</html>

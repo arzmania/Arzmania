@@ -1,0 +1,320 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(180deg, #1a2a1a, #0a0f0a);
+    color: #e0e0e0;
+    line-height: 1.6;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+
+
+.wind-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.feather {
+    position: absolute;
+    top: -50px;
+    width: 30px;
+    height: 50px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(200, 200, 200, 0.5));
+    border-radius: 50% 50% 50% 50% / 10% 10% 90% 90%;
+    animation: featherFloat 12s infinite ease-in-out;
+    opacity: 0.7;
+    filter: blur(1px);
+}
+
+.feather:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+.feather:nth-child(2) {
+    left: 25%;
+    animation-delay: 2s;
+    animation-duration: 13s;
+}
+
+.feather:nth-child(3) {
+    left: 40%;
+    animation-delay: 4s;
+    animation-duration: 10s;
+}
+
+.feather:nth-child(4) {
+    left: 55%;
+    animation-delay: 1s;
+    animation-duration: 12s;
+}
+
+.feather:nth-child(5) {
+    left: 70%;
+    animation-delay: 3s;
+    animation-duration: 11.5s;
+}
+
+.feather:nth-child(6) {
+    left: 85%;
+    animation-delay: 5s;
+    animation-duration: 13.5s;
+}
+
+.feather:nth-child(7) {
+    left: 15%;
+    animation-delay: 6s;
+    animation-duration: 10.5s;
+}
+
+.feather:nth-child(8) {
+    left: 60%;
+    animation-delay: 1.5s;
+    animation-duration: 12.5s;
+}
+
+@keyframes featherFloat {
+    0% {
+        top: -50px;
+        transform: translateX(0) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.7;
+    }
+    25% {
+        transform: translateX(80px) rotate(180deg);
+    }
+    50% {
+        transform: translateX(-50px) rotate(360deg);
+    }
+    75% {
+        transform: translateX(60px) rotate(540deg);
+    }
+    100% {
+        top: 110vh;
+        transform: translateX(-30px) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+.leaf {
+    position: absolute;
+    top: -30px;
+    width: 20px;
+    height: 40px;
+    background: linear-gradient(135deg, rgba(144, 238, 144, 0.8), rgba(34, 139, 34, 0.6));
+    border-radius: 50% 0 50% 0;
+    animation: leafSpin 10s infinite ease-in-out;
+    opacity: 0.6;
+}
+
+.leaf:nth-child(9) {
+    left: 20%;
+    animation-delay: 0.5s;
+}
+
+.leaf:nth-child(10) {
+    left: 35%;
+    animation-delay: 2.5s;
+}
+
+.leaf:nth-child(11) {
+    left: 50%;
+    animation-delay: 4.5s;
+}
+
+.leaf:nth-child(12) {
+    left: 65%;
+    animation-delay: 1.5s;
+}
+
+.leaf:nth-child(13) {
+    left: 80%;
+    animation-delay: 3.5s;
+}
+
+.leaf:nth-child(14) {
+    left: 10%;
+    animation-delay: 5.5s;
+}
+
+@keyframes leafSpin {
+    0% {
+        top: -30px;
+        transform: translateX(0) rotate(0deg) scale(1);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.6;
+    }
+    100% {
+        top: 110vh;
+        transform: translateX(200px) rotate(1080deg) scale(0.5);
+        opacity: 0;
+    }
+}
+
+.race-content {
+    position: relative;
+    z-index: 2;
+    margin-top: 100px;
+    padding: 2rem;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.race-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: rgba(34, 139, 34, 0.2);
+    border-radius: 15px;
+    border: 2px solid #90ee90;
+    box-shadow: 0 0 30px rgba(144, 238, 144, 0.4);
+}
+
+.race-title {
+    font-size: 4rem;
+    color: #90ee90;
+    text-shadow: 
+        0 0 20px #90ee90,
+        0 0 40px #32cd32,
+        2px 2px 10px rgba(0, 0, 0, 0.8);
+    margin-bottom: 1rem;
+    font-weight: bold;
+    animation: windGlow 3s infinite;
+}
+
+@keyframes windGlow {
+    0%, 100% {
+        text-shadow: 
+            0 0 20px #90ee90,
+            0 0 40px #32cd32,
+            2px 2px 10px rgba(0, 0, 0, 0.8);
+        transform: translateX(0);
+    }
+    50% {
+        text-shadow: 
+            0 0 30px #90ee90,
+            0 0 60px #32cd32,
+            2px 2px 10px rgba(0, 0, 0, 0.8);
+        transform: translateX(5px);
+    }
+}
+
+.race-subtitle {
+    font-size: 1.5rem;
+    color: #98fb98;
+    font-style: italic;
+}
+
+.race-body {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.race-image-container {
+    position: sticky;
+    top: 120px;
+    height: fit-content;
+}
+
+.race-image {
+    width: 100%;
+    border-radius: 15px;
+    border: 3px solid #90ee90;
+    box-shadow: 0 10px 40px rgba(144, 238, 144, 0.5);
+}
+
+.race-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.info-section {
+    background: rgba(26, 42, 26, 0.7);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 2px solid rgba(144, 238, 144, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.info-section h2 {
+    color: #90ee90;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px #90ee90;
+}
+
+.info-section p {
+    color: #e0e0e0;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+.info-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.info-section ul li {
+    padding: 0.8rem;
+    margin-bottom: 0.5rem;
+    background: rgba(144, 238, 144, 0.1);
+    border-left: 4px solid #90ee90;
+    border-radius: 5px;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: rgba(144, 238, 144, 0.2);
+    color: #90ee90;
+    text-decoration: none;
+    border: 2px solid #90ee90;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.back-button:hover {
+    background: #90ee90;
+    color: #0a0f0a;
+    box-shadow: 0 0 20px #90ee90;
+    transform: translateX(-5px);
+}
+
+@media (max-width: 768px) {
+    .race-title {
+        font-size: 2.5rem;
+    }
+
+    .race-body {
+        grid-template-columns: 1fr;
+    }
+
+    .race-image-container {
+        position: relative;
+        top: 0;
+    }
+}

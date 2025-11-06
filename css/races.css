@@ -1,0 +1,502 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(180deg, #1a0b2e 0%, #0a0a0a 100%);
+    color: #e0e0e0;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.races-main {
+    margin-top: 80px;
+    padding: 3rem 2rem;
+}
+
+.races-hero {
+    text-align: center;
+    margin-bottom: 4rem;
+    padding: 2rem 0;
+}
+
+.races-hero h1 {
+    font-size: 4.5rem;
+    color: #e0e0e0;
+    text-shadow: 
+        0 0 10px rgba(171, 47, 253, 0.5),
+        0 0 20px rgba(171, 47, 253, 0.3),
+        0 0 30px rgba(171, 47, 253, 0.2);
+    margin-bottom: 1rem;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.subtitle {
+    font-size: 1.8rem;
+    color: #ab2ffd;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.description,
+.instruction {
+    max-width: 800px;
+    margin: 0 auto 1rem;
+    font-size: 1.1rem;
+    color: #b8b8b8;
+}
+
+.races-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.race-card {
+    position: relative;
+    background: rgba(171, 47, 253, 0.05);
+    border: 2px solid transparent;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.race-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(171, 47, 253, 0.1), rgba(192, 126, 236, 0.1));
+    opacity: 0;
+    transition: opacity 0.4s;
+    z-index: 1;
+}
+
+.race-card:hover::before {
+    opacity: 1;
+}
+
+.race-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    border: 2px solid #ab2ffd;
+    box-shadow: 
+        0 10px 40px rgba(171, 47, 253, 0.4),
+        0 0 60px rgba(171, 47, 253, 0.2);
+}
+
+.race-image {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+}
+
+.race-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.race-card:hover .race-image img {
+    transform: scale(1.1);
+}
+
+.race-name {
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 1.3rem;
+    color: #ab2ffd;
+    background: rgba(10, 10, 10, 0.8);
+    position: relative;
+    z-index: 2;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    animation: fadeIn 0.3s;
+}
+
+.modal-content {
+    position: relative;
+    margin: 5% auto;
+    max-width: 1000px;
+    width: 90%;
+    background: linear-gradient(135deg, rgba(26, 11, 46, 0.95), rgba(10, 10, 10, 0.95));
+    border: 2px solid #ab2ffd;
+    border-radius: 20px;
+    padding: 2rem;
+    animation: slideIn 0.3s;
+    box-shadow: 0 0 50px rgba(171, 47, 253, 0.5);
+    overflow: hidden;
+}
+
+.transition-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3000;
+    display: none;
+    pointer-events: none;
+}
+
+.transition-overlay.active {
+    display: block;
+    animation: fadeOut 3s forwards;
+}
+
+.transition-humain {
+    background: radial-gradient(circle, rgba(255,255,255,0.1), #0a0a0a);
+}
+
+.transition-elfel {
+    background: radial-gradient(circle, #ffd700, #fff);
+    animation: blinding 2s forwards;
+}
+
+.transition-elfeo {
+    background: radial-gradient(circle, #1a0033, #000);
+    animation: darkPulse 2.5s forwards;
+}
+
+.transition-fee {
+    background: linear-gradient(45deg, #ff69b4, #ba55d3, #00ffff, #ff1493);
+    background-size: 400% 400%;
+    animation: magicSwirl 2.5s forwards;
+}
+
+.transition-magmarien {
+    background: radial-gradient(circle, #ff4500, #8b0000, #000);
+    animation: fireExplosion 2.5s forwards;
+}
+
+.transition-ondin {
+    background: radial-gradient(circle, #00bfff, #1e90ff, #000080);
+    animation: waterRipple 2.5s forwards;
+}
+
+.transition-golem {
+    background: radial-gradient(circle, #00ffff, #87ceeb, #4682b4);
+    animation: iceShatter 2.5s forwards;
+}
+
+.transition-stryx {
+    background: linear-gradient(90deg, transparent, #90ee90, transparent);
+    animation: windSweep 2s forwards;
+}
+
+.transition-nazgul {
+    background: radial-gradient(circle, rgba(100, 0, 150, 0.8), #000);
+    animation: spectralVoid 3s forwards;
+}
+
+.transition-demon {
+    background: radial-gradient(circle, #8b0000, #000);
+    animation: bloodRush 2.5s forwards;
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    70% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@keyframes blinding {
+    0% { opacity: 0; transform: scale(0); }
+    30% { opacity: 1; transform: scale(1.5); filter: brightness(3); }
+    70% { opacity: 1; transform: scale(1); filter: brightness(1); }
+    100% { opacity: 0; }
+}
+
+@keyframes darkPulse {
+    0% { opacity: 0; }
+    20% { opacity: 1; filter: brightness(0.3); }
+    50% { opacity: 1; filter: brightness(0.1); }
+    100% { opacity: 0; }
+}
+
+@keyframes magicSwirl {
+    0% { opacity: 0; background-position: 0% 50%; transform: rotate(0deg); }
+    30% { opacity: 1; background-position: 100% 50%; transform: rotate(180deg); }
+    70% { opacity: 1; background-position: 200% 50%; transform: rotate(360deg); }
+    100% { opacity: 0; background-position: 400% 50%; }
+}
+
+@keyframes fireExplosion {
+    0% { opacity: 0; transform: scale(0); filter: brightness(1); }
+    20% { opacity: 1; transform: scale(2); filter: brightness(3) blur(0px); }
+    50% { opacity: 1; transform: scale(1); filter: brightness(2) blur(5px); }
+    100% { opacity: 0; transform: scale(0.5); }
+}
+
+@keyframes waterRipple {
+    0% { opacity: 0; transform: scale(0); }
+    20% { opacity: 1; transform: scale(1.2); }
+    40% { opacity: 0.8; transform: scale(0.9); }
+    60% { opacity: 0.6; transform: scale(1.1); }
+    100% { opacity: 0; transform: scale(1.5); }
+}
+
+@keyframes iceShatter {
+    0% { opacity: 0; filter: brightness(1); }
+    30% { opacity: 1; filter: brightness(3) blur(0px); }
+    50% { opacity: 1; filter: brightness(2) blur(3px); }
+    70% { opacity: 0.8; filter: brightness(1) blur(5px); }
+    100% { opacity: 0; }
+}
+
+@keyframes windSweep {
+    0% { transform: translateX(-100%); opacity: 0; }
+    30% { transform: translateX(0%); opacity: 1; }
+    70% { transform: translateX(50%); opacity: 1; }
+    100% { transform: translateX(100%); opacity: 0; }
+}
+
+@keyframes spectralVoid {
+    0% { opacity: 0; filter: blur(50px); }
+    30% { opacity: 1; filter: blur(20px); }
+    60% { opacity: 1; filter: blur(10px); }
+    100% { opacity: 0; filter: blur(0px); }
+}
+
+@keyframes bloodRush {
+    0% { opacity: 0; transform: translateY(100%); }
+    30% { opacity: 1; transform: translateY(0%) scale(1.2); filter: brightness(1.5); }
+    70% { opacity: 1; transform: translateY(0%) scale(1); }
+    100% { opacity: 0; }
+}
+
+.particle {
+    position: absolute;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.effect-elfe .particle {
+    width: 4px;
+    height: 4px;
+    background: radial-gradient(circle, #fff, #ffd700);
+    border-radius: 50%;
+    box-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700;
+    animation: sparkle 3s infinite;
+}
+
+.effect-obscur .particle {
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, rgba(0,0,0,0.8), transparent);
+    border-radius: 50%;
+    animation: darkFloat 4s infinite;
+}
+
+.effect-fee .particle {
+    width: 6px;
+    height: 6px;
+    background: linear-gradient(45deg, #ff69b4, #ba55d3, #00ffff);
+    border-radius: 50%;
+    box-shadow: 0 0 15px currentColor;
+    animation: magicFloat 3s infinite;
+}
+
+.effect-magmarien .particle {
+    width: 8px;
+    height: 8px;
+    background: radial-gradient(circle, #ff4500, #ff0000);
+    border-radius: 50%;
+    box-shadow: 0 0 20px #ff4500;
+    animation: fire 2s infinite;
+}
+
+.effect-ondin .particle {
+    width: 10px;
+    height: 10px;
+    background: radial-gradient(circle, rgba(0, 191, 255, 0.7), transparent);
+    border-radius: 50%;
+    animation: waterDrop 3s infinite;
+}
+
+.effect-golem .particle {
+    width: 6px;
+    height: 6px;
+    background: linear-gradient(135deg, #00ffff, #87ceeb);
+    border-radius: 50%;
+    box-shadow: 0 0 10px #00ffff;
+    animation: iceFloat 4s infinite;
+}
+
+.effect-stryx .particle {
+    width: 15px;
+    height: 3px;
+    background: linear-gradient(90deg, #90ee90, transparent);
+    border-radius: 50%;
+    animation: windBlow 3s infinite;
+}
+
+.effect-nazgul .particle {
+    width: 30px;
+    height: 30px;
+    background: radial-gradient(circle, rgba(100, 0, 150, 0.3), transparent);
+    border-radius: 50%;
+    animation: spectre 5s infinite;
+}
+
+.effect-demon .particle {
+    width: 8px;
+    height: 12px;
+    background: linear-gradient(180deg, #8b0000, #000);
+    border-radius: 50% 50% 0 0;
+    animation: bloodDrip 2s infinite;
+}
+
+@keyframes sparkle {
+    0%, 100% { opacity: 0; transform: translateY(0) scale(0); }
+    50% { opacity: 1; transform: translateY(-100px) scale(1); }
+}
+
+@keyframes darkFloat {
+    0%, 100% { transform: translate(0, 0); opacity: 0.3; }
+    50% { transform: translate(30px, -50px); opacity: 0.6; }
+}
+
+@keyframes magicFloat {
+    0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0; }
+    50% { transform: translateY(-80px) rotate(360deg); opacity: 1; }
+}
+
+@keyframes fire {
+    0% { transform: translateY(0) scale(1); opacity: 1; }
+    100% { transform: translateY(-150px) scale(0.3); opacity: 0; }
+}
+
+@keyframes waterDrop {
+    0% { transform: translateY(-20px); opacity: 0; }
+    50% { opacity: 0.8; }
+    100% { transform: translateY(200px); opacity: 0; }
+}
+
+@keyframes iceFloat {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); opacity: 0; }
+    50% { transform: translate(40px, -100px) rotate(180deg); opacity: 1; }
+}
+
+@keyframes windBlow {
+    0% { transform: translateX(-50px); opacity: 0; }
+    50% { opacity: 0.7; }
+    100% { transform: translateX(300px); opacity: 0; }
+}
+
+@keyframes spectre {
+    0%, 100% { transform: scale(1); opacity: 0.2; }
+    50% { transform: scale(1.5); opacity: 0.5; }
+}
+
+@keyframes bloodDrip {
+    0% { transform: translateY(-20px); opacity: 0.8; }
+    100% { transform: translateY(200px); opacity: 0; }
+}
+
+.close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    color: #ab2ffd;
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-modal:hover {
+    color: #c07eec;
+}
+
+.modal-body {
+    display: flex;
+    gap: 2rem;
+}
+
+.modal-image {
+    flex: 1;
+    max-width: 400px;
+}
+
+.modal-image img {
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid #ab2ffd;
+}
+
+.modal-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.modal-info h2 {
+    color: #ab2ffd;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.modal-info p {
+    color: #e0e0e0;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .races-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .races-grid {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+
+    .modal-body {
+        flex-direction: column;
+    }
+
+    .modal-image {
+        max-width: 100%;
+    }
+}
