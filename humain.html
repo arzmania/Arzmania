@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arzmania - Humain</title>
-    <link rel="stylesheet" href="../../../css/Navbar.css">
+    <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="humain.css">
+    <link rel="icon" type="image/ico" href="images/icon.ico">
 </head>
 <body>
     <div id="navbar-placeholder"></div>
@@ -32,7 +33,7 @@
 
         <div class="race-body">
             <div class="race-image-container">
-                <img src="../../../img/races/humain.jpg" alt="Humain" class="race-image">
+                <img src="img/races/humain.jpg" alt="Humain" class="race-image">
             </div>
 
             <div class="race-info">
@@ -61,11 +62,11 @@
             </div>
         </div>
 
-        <a href="../../race.html" class="back-button">← Retour aux Races</a>
+        <a href="race.html" class="back-button">← Retour aux Races</a>
     </main>
 
     <script>
-    fetch('../../navbar.html')
+    fetch('navbar.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('navbar-placeholder').innerHTML = data;
