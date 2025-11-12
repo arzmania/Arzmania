@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arzmania - Hybride & Dragon</title>
+    <link rel="stylesheet" href="../../../css/Navbar.css">
+    <link rel="stylesheet" href="hybride-dragon.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <div class="dual-background">
+        <div class="hybrid-particles"></div>
+        <div class="hybrid-particles"></div>
+        <div class="hybrid-particles"></div>
+        <div class="hybrid-particles"></div>
+        <div class="hybrid-particles"></div>
+        <div class="dragon-scale"></div>
+        <div class="dragon-scale"></div>
+        <div class="dragon-scale"></div>
+        <div class="dragon-scale"></div>
+        <div class="dragon-flame"></div>
+        <div class="dragon-flame"></div>
+        <div class="dragon-flame"></div>
+        <div class="dual-glow glow1"></div>
+        <div class="dual-glow glow2"></div>
+        <div class="dual-glow glow3"></div>
+    </div>
+
+    <main class="race-content">
+        <!-- HYBRIDE -->
+        <div class="race-header hybrid-header">
+            <h1 class="race-title">Hybride</h1>
+            <p class="race-subtitle"></p>
+        </div>
+
+        <div class="race-body">
+            <div class="race-image-container">
+                <img src="../../../img/races/hybrides & autres.png" alt="Hybride" class="race-image">
+            </div>
+
+            <div class="race-info">
+                <section class="info-section">
+                    <h2>Description</h2>
+                    <p></p>
+                </section>
+
+                <section class="info-section">
+                    <h2>Attributs de Race</h2>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </section>
+
+                <section class="info-section">
+                    <h2>Histoire</h2>
+                    <p></p>
+                </section>
+
+                <section class="info-section">
+                    <h2>+</h2>
+                    <p>un humain qu'a violé un chat :)</p>
+                </section>
+            </div>
+        </div>
+
+        <div class="race-separator"></div>
+
+        <!-- DRAGON -->
+        <div class="race-header dragon-header">
+            <h1 class="race-title">Dragon</h1>
+            <p class="race-subtitle"></p>
+        </div>
+
+        <div class="race-body">
+            <div class="race-image-container">
+                <img src="../../../img/races/dragon.jpg" alt="Dragon" class="race-image">
+            </div>
+
+            <div class="race-info">
+                <section class="info-section">
+                    <h2>Description</h2>
+                    <p></p>
+                </section>
+
+                <section class="info-section">
+                    <h2>Attributs de Race</h2>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </section>
+
+                <section class="info-section">
+                    <h2>Histoire</h2>
+                    <p></p>
+                </section>
+
+                <section class="info-section">
+                    <h2>+</h2>
+                    <p></p>
+                </section>
+                <section class="info-section">
+                    <h2>Restriction</h2>
+                    <p>Boost de server, limite de char</p>
+                </section>
+            </div>
+        </div>
+
+        <a href="../../Races.html" class="back-button">← Retour aux Races</a>
+    </main>
+
+    <script>
+    fetch('../../navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar-placeholder').innerHTML = data;
+            
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            if (hamburger) {
+                hamburger.addEventListener('click', () => {
+                    navMenu.classList.toggle('active');
+                });
+            }
+            
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

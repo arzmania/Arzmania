@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(180deg, #0a0a0a, #1a1a2e);
+    color: #e0e0e0;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.difficulte-main {
+    margin-top: 100px;
+    padding: 2rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.difficulte-hero {
+    text-align: center;
+    padding: 3rem 2rem;
+    margin-bottom: 4rem;
+    background: rgba(171, 47, 253, 0.1);
+    border-radius: 15px;
+    border: 2px solid #ab2ffd;
+}
+
+.difficulte-hero h1 {
+    font-size: 3.5rem;
+    color: #ab2ffd;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 20px rgba(171, 47, 253, 0.5);
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+.levels-section {
+    margin-bottom: 4rem;
+}
+
+.levels-section h2 {
+    font-size: 2.5rem;
+    color: #ab2ffd;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.level-card {
+    background: rgba(26, 26, 46, 0.8);
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-left: 5px solid;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.level-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.level-1 {
+    border-color: #90ee90;
+}
+
+.level-2 {
+    border-color: #87ceeb;
+}
+
+.level-3 {
+    border-color: #ffd700;
+}
+
+.level-4 {
+    border-color: #ffa500;
+}
+
+.level-5 {
+    border-color: #ff4500;
+}
+
+.level-6 {
+    border-color: #8b0000;
+}
+
+.level-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.stars {
+    font-size: 2rem;
+    color: #ffd700;
+    text-shadow: 0 0 10px #ffd700;
+}
+
+.level-header h3 {
+    font-size: 2rem;
+    color: #fff;
+}
+
+.level-content {
+    padding-left: 3.5rem;
+}
+
+.unlock-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.unlock-badge.available {
+    background: rgba(0, 255, 0, 0.2);
+    color: #90ee90;
+    border: 1px solid #90ee90;
+}
+
+.unlock-badge.locked {
+    background: rgba(255, 0, 0, 0.2);
+    color: #ff6b6b;
+    border: 1px solid #ff6b6b;
+}
+
+.level-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.examples-section {
+    margin-bottom: 4rem;
+}
+
+.examples-section h2 {
+    font-size: 2.5rem;
+    color: #ab2ffd;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.examples-intro {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.examples-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.example-item {
+    background: rgba(26, 26, 46, 0.8);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid #ffd700;
+    transition: transform 0.3s;
+}
+
+.example-item:hover {
+    transform: translateY(-5px);
+}
+
+.example-stars {
+    font-size: 1.5rem;
+    color: #ffd700;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 10px #ffd700;
+}
+
+.example-item p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.info-section {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(171, 47, 253, 0.1);
+    border-radius: 15px;
+    border: 2px solid #ab2ffd;
+}
+
+.info-section h2 {
+    font-size: 2rem;
+    color: #ab2ffd;
+    margin-bottom: 1rem;
+}
+
+.info-section p {
+    font-size: 1.1rem;
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+    .difficulte-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .level-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .level-content {
+        padding-left: 0;
+    }
+
+    .examples-grid {
+        grid-template-columns: 1fr;
+    }
+}
