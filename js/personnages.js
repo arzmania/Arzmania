@@ -1,6 +1,4 @@
-// Animation au scroll
 document.addEventListener('DOMContentLoaded', function() {
-    // Observer pour animations au scroll
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
@@ -15,7 +13,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, observerOptions);
 
-    // Animer les cartes héros
     const heroCards = document.querySelectorAll('.hero-card');
     heroCards.forEach((card, index) => {
         card.style.opacity = '0';
@@ -24,7 +21,6 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(card);
     });
 
-    // Animer les cartes conseil
     const councilCards = document.querySelectorAll('.council-card');
     councilCards.forEach((card, index) => {
         card.style.opacity = '0';

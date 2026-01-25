@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arzmania - L'Histoire Commence</title>
+    <link rel="stylesheet" href="../css/Navbar.css">
+    <link rel="stylesheet" href="../css/contexte.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <div class="audio-control">
+        <audio id="ambient-music" loop>
+            <source src="/img/contexte/ost.mp3" type="audio/mpeg">
+        </audio>
+        <button id="audio-toggle" class="glow-button" aria-label="Contrôle de la musique">
+            <span class="icon">♪</span>
+        </button>
+        <div class="volume-slider-container">
+            <input type="range" id="volume-slider" min="0" max="100" value="20" class="volume-slider">
+            <span class="volume-label" id="volume-label">20%</span>
+        </div>
+    </div>
+
+    <nav class="chapter-nav" role="navigation" aria-label="Navigation des chapitres">
+        <div class="nav-dot active" data-chapter="0" title="Terzam"></div>
+        <div class="nav-dot" data-chapter="1" title="Les Anges"></div>
+        <div class="nav-dot" data-chapter="2" title="Flammes de l'Enfer"></div>
+        <div class="nav-dot" data-chapter="3" title="L'Ange de la Mort"></div>
+        <div class="nav-dot" data-chapter="4" title="La Grande Guerre"></div>
+        <div class="nav-dot" data-chapter="5" title="Conclusion"></div>
+    </nav>
+
+    <div class="cinematic-intro">
+        <div class="logo-container">
+            <h1 class="cinematic-logo">ARZMANIA</h1>
+            <p class="cinematic-subtitle">L'histoire commence...</p>
+        </div>
+    </div>
+
+    <canvas id="particles-canvas"></canvas>
+
+    <main class="story-content">
+        
+        <section class="story-chapter chapter-peaceful" data-chapter="0">
+            <div class="chapter-background"></div>
+            <div class="timeline-marker left">
+                <div class="marker-dot"></div>
+                <div class="marker-line"></div>
+            </div>
+            
+            <div class="chapter-content fade-in">
+                <div class="chapter-image">
+                    <img src="../img/contexte/Terzam.gif" alt="Le monde de Terzam" class="parallax-image">
+                    <div class="image-glow"></div>
+                </div>
+                <div class="chapter-text">
+                    <h2 class="chapter-title">Ils l'appelèrent <span class="highlight">"Terzam"</span></h2>
+                    <p class="typewriter" data-speed="20">Notre monde "Arzmania" est une terre vaste et riche. Berceaux de tous les peuples, des créatures étranges et des monstres dangereux. Cachés dans l'ombre des forêts denses de Galadhbo, sous les cendres des grands volcans de Rorgrok, et gelés dans les anciennes montagnes du nord de Ridranthic. Se terrent des secrets et des mystères qui ont toujours su échapper à notre compréhension à travers les âges...</p>
+                    <p class="typewriter" data-speed="20" data-delay="3000">Cependant, peu de mystères ont attiré une fascination aussi importante que l'espèce des Anges. Maîtres des cieux, des terres et des mers et créateurs de tout ce qui aurait existé auparavant selon les anciens récits.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="story-chapter chapter-mystical" data-chapter="1">
+            <div class="chapter-background"></div>
+            <div class="timeline-marker right">
+                <div class="marker-dot"></div>
+                <div class="marker-line"></div>
+            </div>
+            
+            <div class="chapter-content fade-in">
+                <div class="chapter-text">
+                    <h2 class="chapter-title">Les <span class="highlight">Anges</span></h2>
+                    <p class="typewriter" data-speed="20">Ces fameux Anges possédaient de très étranges pouvoirs de création, on raconte qu'ils étaient capables d'inventer tout et n'importe quoi et même au-delà de nos rêves les plus fous. Les plus puissants des anges étaient connus sous le nom d'archanges. Ils étaient constitués d'un conseil de 4 membres éminents chez les Anges et étaient répartis sur les 4 points cardinaux. Signe d'une paix et d'une unité avec les autres peuples. C'est bien à cause de cela, qu'ils furent aveuglés face à un grand danger...</p>
+                </div>
+                <div class="chapter-image">
+                    <img src="/img/contexte/ville.gif" alt="Les Anges célestes" class="parallax-image">
+                    <div class="image-glow"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="story-chapter chapter-dark" data-chapter="2">
+            <div class="chapter-background"></div>
+            <div class="timeline-marker left">
+                <div class="marker-dot"></div>
+                <div class="marker-line"></div>
+            </div>
+            
+            <div class="chapter-content fade-in">
+                <div class="chapter-image">
+                    <img src="/img/contexte/enfer.gif" alt="Flammes démoniaques" class="parallax-image">
+                    <div class="image-glow red"></div>
+                </div>
+                <div class="chapter-text">
+                    <h2 class="chapter-title">Brûlant dans les <span class="highlight red">Flammes Éternelles</span></h2>
+                    <p class="typewriter" data-speed="20">Brûlant dans les flammes éternelles de l'enfer, une armée démoniaque partit à la conquête de notre monde. Ils vainquirent les royaumes humains et les autres peuples d'Arzmania, et se sont répandus à travers le pays. Mais ils ne restèrent pas tout de suite inarrêtables...</p>
+                    <p class="typewriter" data-speed="20" data-delay="2500">Les Anges firent ainsi leur retour durant ces périodes sombres, étant ainsi les seuls gardiens des terres d'Arzmania. Les deux clans opposés se sont ainsi livrés à des affrontements d'une ampleur, d'une furie et d'une puissance inconcevable.</p>
+                    <p class="typewriter" data-speed="20" data-delay="5000">Malheureusement, les démons étaient très bien préparés pour cette invasion. Et même les légendaires Anges ne parvinrent pas à les arrêter. Sans espoir d'une quelconque victoire, les royaumes restants ont appelé les Anges pour avoir l'aide des Archanges. À contrecœur, les Archanges acceptèrent, et décidèrent d'organiser un tournoi en choisissant chacun un champion, le gagnant aura ainsi le droit d'avoir la puissance combinée des 4 Archanges...</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="story-chapter chapter-death" data-chapter="3">
+            <div class="chapter-background"></div>
+            <div class="timeline-marker right">
+                <div class="marker-dot"></div>
+                <div class="marker-line"></div>
+            </div>
+            
+            <div class="chapter-content fade-in">
+                <div class="chapter-text">
+                    <h2 class="chapter-title"><span class="highlight red">L'Ange de la Mort</span></h2>
+                    <p class="typewriter" data-speed="20">Pendant le championnat, un guerrier se démarqua plus que les autres : Endurant, rusé mais surtout puissant.</p>
+                    <p class="typewriter" data-speed="20" data-delay="1500">Le champion avait été trouvé. Mais alors que les Archanges s'apprêtèrent à lui donner leurs pouvoirs, ces derniers sentirent toute la noirceur de son cœur. Outrés, les Archanges refusèrent de lui conférer leurs capacités et de le bannir, craignant ainsi qu'un drame n'arrive.</p>
+                    <p class="typewriter" data-speed="20" data-delay="4500">Cette nuit, alors que les Archanges réfléchissaient à réorganiser un nouveau championnat. Le guerrier banni partit seul pour récupérer ce qui lui était dû... Un par un, il assassina tous les Archanges et les Anges. Que ce soit du Nord et du Sud, mais aussi de l'Est et de l'Ouest.</p>
+                    <p class="typewriter" data-speed="20" data-delay="8000">À travers ces actes sombres, il fut surnommé : <span class="highlight red">"L'Ange de la Mort"</span></p>
+                </div>
+                <div class="chapter-image">
+                    <img src="../img/contexte/ange.jpg" alt="L'Ange de la Mort" class="parallax-image">
+                    <div class="image-glow red"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="story-chapter chapter-war" data-chapter="4">
+            <div class="chapter-background"></div>
+            <div class="timeline-marker center">
+                <div class="marker-dot epic"></div>
+                <div class="marker-line"></div>
+            </div>
+            
+            <div class="chapter-content fade-in centered">
+                <h2 class="epic-title">
+                    <span class="word">La</span>
+                    <span class="word">Grande</span>
+                    <span class="word">Guerre</span>
+                    <span class="word">Commença...</span>
+                </h2>
+                <div class="chapter-image epic">
+                    <img src="/img/contexte/combat.gif" alt="La Grande Guerre" class="parallax-image">
+                    <div class="image-glow orange"></div>
+                </div>
+                <p class="epic-quote">Les survivants du groupe résistant des "Lames de la lumière" se sont ralliés sous le roi Rendor, qui était l'ancien roi des Elfes Lumineux et ont combattu ensemble les troupes démoniaques de front. Les Humains, ont réassemblé leurs armées, étant autrefois l'alliance de royaumes la plus prospère de tout le pays. Les Ondins remontèrent du puits des anciens. Les Magmariens arrivèrent vers le sud, les Golems de Glace arrivèrent vers le Nord. Les Strix venant des cieux, restèrent pour la plupart dans leurs îles, souhaitant éviter le moindre conflit.</p>
+                <p class="epic-quote">Mais malgré tous leurs efforts, l'Ange de la Mort, Pharra et l'armée des Démons, ne put pas être vaincu...</p>
+                <p class="epic-quote">Durant des affrontements sanguinaires qui duraient maintenant depuis 1 siècle, les rapports de forces de ce conflit ont tourné, après qu'un mystérieux chevaucheur de dragon rejoignit le combat. Habile au combat et avec sa monture, le grand dragon Arzmania fut capable d'unir et de conduire les armées à la victoire.</p>
+            </div>
+        </section>
+
+        <section class="story-chapter chapter-end" data-chapter="5">
+            <div class="chapter-background"></div>
+            
+            <div class="chapter-content fade-in centered">
+                <div class="conclusion-box">
+                    <p class="final-text glow-text">Avec l'aide des plus grands héros de guerre et des forces de tous les peuples, Pharra et son armée démoniaque, fut contrainte de battre en retraite jusqu'en enfer.</p>
+                    <p class="final-text">Sans alliés, l'Ange de la Mort se retira au pied du mont Gomo. Ici, le cavalier et son dragon Arzmania combattirent seul l'Ange de la Mort. Et les deux... Ont été vaincus...</p>
+                    <p class="final-text">Les Royaumes furent ainsi unifiés, et construisirent une gigantesque ville capitale qui baptisèrent "Arzmania" en hommage au Dragon libérateur.</p>
+                    <p class="final-text glow-text">La paix fut ainsi enfin retrouvée, signant une fin définitive, à la Grande Guerre.</p>
+                </div>
+                <div class="portal-effect"></div>
+            </div>
+        </section>
+    </main>
+
+    <div class="custom-cursor"></div>
+    <div class="cursor-trail"></div>
+
+    <script src="../js/navbar-loader.js"></script>
+    <script src="../js/contexte.js"></script>
+</body>
+</html>
