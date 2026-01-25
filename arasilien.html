@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arzmania - Arasilien</title>
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="races/arasilien/arasilien.css">
+    <link rel="icon" type="image/ico" href="images/icon.ico">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <div class="arasilien-background">
+        <div class="magic-circle circle1"></div>
+        <div class="magic-circle circle2"></div>
+        <div class="magic-rune rune1">✦</div>
+        <div class="magic-rune rune2">✧</div>
+        <div class="magic-rune rune3">✦</div>
+        <div class="magic-rune rune4">✧</div>
+        <div class="magic-rune rune5">✦</div>
+        <div class="magic-rune rune6">✧</div>
+        <div class="magic-orb"></div>
+        <div class="magic-orb"></div>
+        <div class="magic-orb"></div>
+        <div class="magic-orb"></div>
+        <div class="magic-orb"></div>
+        <div class="magic-orb"></div>
+        <div class="magic-orb"></div>
+        <div class="magic-orb"></div>
+        <div class="golden-sparkle"></div>
+        <div class="golden-sparkle"></div>
+        <div class="golden-sparkle"></div>
+        <div class="golden-sparkle"></div>
+        <div class="golden-sparkle"></div>
+        <div class="golden-sparkle"></div>
+        <div class="golden-sparkle"></div>
+        <div class="golden-sparkle"></div>
+        <div class="golden-sparkle"></div>
+        <div class="golden-sparkle"></div>
+        <div class="golden-sparkle"></div>
+        <div class="golden-sparkle"></div>
+        <div class="magic-lightning"></div>
+        <div class="magic-lightning"></div>
+        <div class="magic-lightning"></div>
+        <div class="magic-wave"></div>
+        <div class="magic-wave"></div>
+        <div class="mystic-glow glow1"></div>
+        <div class="mystic-glow glow2"></div>
+        <div class="mystic-glow glow3"></div>
+        <div class="mystic-glow glow4"></div>
+    </div>
+
+    <main class="race-content">
+        <div class="race-header">
+            <h1 class="race-title">Arasilien</h1>
+            <p class="race-subtitle">Une douce alliance entre science & magie...</p>
+        </div>
+
+        <div class="race-body">
+            <div class="race-image-container">
+                <img src="img/races/arasilien.png" alt="Arasilien" class="race-image">
+            </div>
+
+            <div class="race-info">
+                <section class="info-section">
+                    <h2>Description</h2>
+                    <p>Les Arasiliens sont le peuple principal du nouveau continent. Ils se démarquent par leur peau bleutée, leurs tatouages et les oreilles pointues. <br><br>
+                        Ces êtres vivants ont de grandes affinités avec la magie et ont une technologique plus avancée que le reste du monde.</p>
+                </section>
+
+                <section class="info-section">
+                    <h2>Attributs de Race</h2>
+                    <ul>
+                        <li>Affinité avec la magie innée.</li>
+                        <li>Tatouages naturels à la naissance qui s'illuminent lorsqu'ils utilisent la magie.</li>
+                    </ul>
+                </section>
+
+                <section class="info-section">
+                    <h2>Histoire</h2>
+                    <p>Ces derniers sont une civilisation millénaire qui vivait recluse sur le continent d'Arasil, à 600km de la côte sud d'Arzmania. Ils vivent dans une monarchie absolue matriarcale (c'est à dire que ce n'est que des reines). Les Arasiliens ont développés une vie sans guerre centrée sur la magie et le progrès technologique. Maintenant en alliance avec le peuple d'Arzmania par le bias du conseil des trois, ils sont prêt à s'intégrer dans le commerce avec eux.</p>
+                </section>
+
+                <section class="info-section">
+                    <h2>Espérance de Vie</h2>
+                    <p>120 ans</p>
+                </section>
+            </div>
+        </div>
+
+        <a href="race.html" class="back-button">← Retour aux Races</a>
+    </main>
+
+    <script>
+    fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar-placeholder').innerHTML = data;
+            
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            if (hamburger) {
+                hamburger.addEventListener('click', () => {
+                    navMenu.classList.toggle('active');
+                });
+            }
+            
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

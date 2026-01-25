@@ -13,6 +13,10 @@ body {
 }
 
 .personnages-hero {
+<<<<<<< HEAD
+=======
+    margin-top: 4rem;
+>>>>>>> origin/main
     text-align: center;
     padding: 4rem 2rem;
     background: linear-gradient(135deg, rgba(171, 47, 253, 0.2), rgba(26, 26, 46, 0.8));

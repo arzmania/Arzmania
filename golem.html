@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arzmania - Golem de Glace</title>
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="races/golem/golem.css">
+    <link rel="icon" type="image/ico" href="images/icon.ico">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <div class="ice-background">
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="crystal crystal1"></div>
+        <div class="crystal crystal2"></div>
+        <div class="crystal crystal3"></div>
+        <div class="crystal crystal4"></div>
+    </div>
+
+    <main class="race-content">
+        <div class="race-header">
+            <h1 class="race-title">Golem de Glace</h1>
+            <p class="race-subtitle">Des rochers qui bougent tout seul dans les montagnes...</p>
+        </div>
+
+        <div class="race-body">
+            <div class="race-image-container">
+                <img src="img/races/golem de glace.png" alt="Golem de Glace" class="race-image">
+            </div>
+
+            <div class="race-info">
+                <section class="info-section">
+                    <h2>Description</h2>
+                    <p>Les golems de glace vivent dans les grandes montagnes de Winter et sont pour la plupart présents à Ridranthic. Ces derniers peuvent parfois être confondus avec des rochers ou des icebergs. Ils sont constitués de glace et de roche. <br><br>
+                        Ce sont des être vivants très forts physiquement et insensibles au froid.</p>
+                </section>
+
+                <section class="info-section">
+                    <h2>Attributs de Race</h2>
+                    <ul>
+                        <li>Une résistance au froid.</li>
+                        <li>Une résistance au attaques physiques.</li>
+                        <li>Un don pour le camouflage dans les montagnes.</li>
+                        <li>Des blessures en cas de fortes chaleurs.</li>
+                    </ul>
+                </section>
+
+                <section class="info-section">
+                    <h2>Histoire</h2>
+                    <p>Il n'y a pas vraiment de système politique, les Golems de glaces sont divisés en plusieurs<br>grandes familles :</p>
+                    <ul>
+                        <li>Ravhi (Famille axée sur la magie).</li>
+                        <li>Svante (Famille belliqueuse qui vit pour le combat).</li>
+                        <li>Vandrad (Famille de nomades qui explorent le monde).</li>
+                        <li>Gorm (Famille qui est pour la paix entre les familles et qui essaye de faire avancer les Golem de glaces technologiquement parlant).</li>
+                        <li>Lujia (Famille qui vit de la chasse au primes et est aussi composée de mercenaires, la particularité de cette famille est que cette dernière peut accepter des gens d'autres races tant que celles ci prennent le même nom qu'eux)</li>
+                    </ul>
+                    <p>Contrairement au Magmariens, chez les Golems de glaces, porter une armure est un signe de faiblesse.</p>
+                </section>
+
+                <section class="info-section">
+                    <h2>Espérance de Vie</h2>
+                    <p>200 ans</p>
+                </section>
+            </div>
+        </div>
+
+        <a href="race.html" class="back-button">← Retour aux Races</a>
+    </main>
+
+    <script>
+    fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar-placeholder').innerHTML = data;
+            
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            if (hamburger) {
+                hamburger.addEventListener('click', () => {
+                    navMenu.classList.toggle('active');
+                });
+            }
+            
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                });
+            });
+        });
+    </script>
+    <script src="golem.js"></script>
+</body>
+
+</html>
+
+

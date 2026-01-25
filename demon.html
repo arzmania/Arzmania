@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arzmania - Démon</title>
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="races/demon/demon.css">
+    <link rel="icon" type="image/ico" href="images/icon.ico">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <div class="demonic-background">
+        <div class="blood-drop"></div>
+        <div class="blood-drop"></div>
+        <div class="blood-drop"></div>
+        <div class="blood-drop"></div>
+        <div class="blood-drop"></div>
+        <div class="blood-drop"></div>
+        <div class="dark-flame"></div>
+        <div class="dark-flame"></div>
+        <div class="dark-flame"></div>
+        <div class="dark-flame"></div>
+        <div class="infernal-glow glow1"></div>
+        <div class="infernal-glow glow2"></div>
+        <div class="infernal-glow glow3"></div>
+    </div>
+
+    <main class="race-content">
+        <div class="race-header">
+            <h1 class="race-title">Démon</h1>
+            <p class="race-subtitle">Quand le mal décide de prendre forme...</p>
+        </div>
+
+        <div class="race-body">
+            <div class="race-image-container">
+                <img src="img/races/démon.png" alt="Démon" class="race-image">
+            </div>
+
+            <div class="race-info">
+                <section class="info-section">
+                    <h2>Description</h2>
+                    <p>Les Démons étaient considérés comme les principaux ennemis des autres peuples d'Arzmania, bien que certains faisaient exception et vivaient en paix avec les autres peuples. Ils peuvent prendre à peu près n'importe quelle apparence. <br>
+                        Maintenant, ils vivent libres dans la cité perdue de Minas Morgul dans l'objectif de lui redonner sa gloire d'antan au côté des Nazguls.</p>
+                </section>
+
+                <section class="info-section">
+                    <h2>Attributs de Race</h2>
+                    <ul>
+                        <li>Facilités pour provoquer et manipuler psychologiquement.</li>
+                        <li>Une maîtrise de la magie noire et démoniaque.</li>
+                        <li>Possession démoniaque (demandez à la personne hors RP si elle est consentante pour se faire posséder).</li>
+                        <li>Régénérations des blessures sauf la décapitation.</li>
+                    </ul>
+                </section>
+
+                <section class="info-section">
+                    <h2>Histoire</h2>
+                    <p>Les démons ont autrefois occupés tout Arzmania et ont instauré un régime de terreur au sein des autres races. Pendant la grande guerre, ces derniers ont combattu au côté de Pharra contre les autres peuples, contre le dragon d'Arzmania et ont perdu. Ils ont donc été banni d'Arzmania, contraints à rester en enfer. <br><br>
+                        Depuis la mort de Pharra et la prise au pouvoir de Tom Sammartano, les démons sont enfin libres du joug de l'ancien roi.</p>
+                </section>
+
+                <section class="info-section">
+                    <h2>Espérance de Vie</h2>
+                    <p>Ils ne meurent pas de vieillesse, ils meurent uniquement lorsqu'ils sont pourfendus, en les décapitant.</p>
+                </section>
+            </div>
+        </div>
+
+        <a href="race.html" class="back-button">← Retour aux Races</a>
+    </main>
+
+    <script>
+    fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar-placeholder').innerHTML = data;
+            
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            if (hamburger) {
+                hamburger.addEventListener('click', () => {
+                    navMenu.classList.toggle('active');
+                });
+            }
+            
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
+
+
+

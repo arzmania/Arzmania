@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arzmania - Elfe Lumineux</title>
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="races/elfeL/elfel.css">
+    <link rel="icon" type="image/ico" href="images/icon.ico">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <div class="light-background">
+        <div class="light-ray"></div>
+        <div class="light-ray"></div>
+        <div class="light-ray"></div>
+        <div class="light-ray"></div>
+        <div class="light-particle"></div>
+        <div class="light-particle"></div>
+        <div class="light-particle"></div>
+        <div class="light-particle"></div>
+        <div class="light-particle"></div>
+        <div class="light-particle"></div>
+        <div class="light-particle"></div>
+        <div class="light-particle"></div>
+        <div class="glow-orb orb1"></div>
+        <div class="glow-orb orb2"></div>
+        <div class="glow-orb orb3"></div>
+    </div>
+
+    <main class="race-content">
+        <div class="race-header">
+            <h1 class="race-title">Elfe Lumineux</h1>
+            <p class="race-subtitle">Les gardiens de la forêt...</p>
+        </div>
+
+        <div class="race-body">
+            <div class="race-image-container">
+                <img src="img/races/elfes_lumineux.jpg" alt="Elfe Lumineux" class="race-image">
+            </div>
+
+            <div class="race-info">
+                <section class="info-section">
+                    <h2>Description</h2>
+                    <p>Les Elfes Lumineux sont les habitants des forêt de Galadhbo, même s'ils sont un peu présents de partout, ils vivent surtout en majorité dans les arbres. Ils se démarquent par leurs oreilles pointues et leur peau claire. <br><br>
+                        Ce sont des êtres vivants ayant une bonne vue et un talent dans le tir à l'arc.</p>
+                </section>
+
+                <section class="info-section">
+                    <h2>Attributs de Race</h2>
+                    <ul>
+                        <li>Un don pour le camouflage et les déplacements discrets.</li>
+                        <li>De l'affinité avec l'arc.</li>
+                        <li>Une ouïe surdéveloppé.</li>
+                    </ul>
+                </section>
+
+                <section class="info-section">
+                    <h2>Histoire</h2>
+                    <p>Au début, les Elfes obscurs et les Elfes lumineux vivaient en harmonie. Mais très vite une forme de racisme se développa envers les Elfes obscurs qui étaient une minorité. Une guerre civile à donc éclatée au sein de ces deux clans qui se sont séparés juste après. Cette guerre civile à failli tuer la grande majorité des Elfes obscurs, cependant à la fin de la guerre une reconstruction du clan eut lieu. Depuis les deux factions sont encore en conflit mais ils évitent toutefois d'entraîner une nouvelle guerre civile.</p>
+                </section>
+
+                <section class="info-section">
+                    <h2>Espérance de Vie</h2>
+                    <p>500 ans.</p>
+                </section>
+            </div>
+        </div>
+
+        <a href="race.html" class="back-button">← Retour aux Races</a>
+    </main>
+
+    <script>
+    fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar-placeholder').innerHTML = data;
+            
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            if (hamburger) {
+                hamburger.addEventListener('click', () => {
+                    navMenu.classList.toggle('active');
+                });
+            }
+            
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
+
+
+
+

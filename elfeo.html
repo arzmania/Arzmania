@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arzmania - Elfes Obscurs</title>
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="races/elfeo/elfeo.css">
+    <link rel="icon" type="image/ico" href="images/icon.ico">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <div class="dark-background">
+        <div class="shadow"></div>
+        <div class="shadow"></div>
+        <div class="shadow"></div>
+        <div class="shadow"></div>
+        <div class="shadow"></div>
+        <div class="shadow"></div>
+        <div class="dark-mist mist1"></div>
+        <div class="dark-mist mist2"></div>
+        <div class="dark-mist mist3"></div>
+    </div>
+
+    <main class="race-content">
+        <div class="race-header">
+            <h1 class="race-title">Elfes Obscurs</h1>
+            <p class="race-subtitle">Les rois des brigands...</p>
+        </div>
+
+        <div class="race-body">
+            <div class="race-image-container">
+                <img src="img/races/elfes_obscurs.png" alt="Elfes Obscurs" class="race-image">
+            </div>
+
+            <div class="race-info">
+                <section class="info-section">
+                    <h2>Description</h2>
+                    <p>Les Elfes Obscurs sont l'autre clan des Elfes, ces derniers vivent dans les Grottes d'Asteros et se sont mis à vivre du pillage afin de survivre. Ils se démarquent par leur peur oreilles pointues et leur peau sombre. <br><br>
+                        Ce sont des êtres vivants ayant une bonne vue et un talent à la dague.</p>
+                </section>
+
+                <section class="info-section">
+                    <h2>Attributs de Race</h2>
+                    <ul>
+                        <li>Un don pour le camouflage et les déplacements discrets.</li>
+                        <li>Un bon maniement de la dague.</li>
+                        <li>Une ouïe surdéveloppée.</li>
+                    </ul>
+                </section>
+
+                <section class="info-section">
+                    <h2>Histoire</h2>
+                    <p>Depuis la séparation des deux clans d'Elfes, les Elfes obscurs se sont associés avec la guilde des assassins en vivant de la chasse aux primes et du pillage. Les Elfes obscurs sont cependant moins nombreux que les Elfes lumineux à cause de la guerre civile. Ils vouent ainsi une certaine haine envers le clan des Elfes lumineux.</p>
+                </section>
+
+                <section class="info-section">
+                    <h2>Espérance de Vie</h2>
+                    <p>500 ans</p>
+                </section>
+            </div>
+        </div>
+
+        <a href="race.html" class="back-button">← Retour aux Races</a>
+    </main>
+
+    <script>
+    fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar-placeholder').innerHTML = data;
+            
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            if (hamburger) {
+                hamburger.addEventListener('click', () => {
+                    navMenu.classList.toggle('active');
+                });
+            }
+            
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                });
+            });
+        });
+    </script>
+    <script src="elfeo.js"></script>
+</body>
+
+</html>
+
+
+

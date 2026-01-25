@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arzmania - Fée</title>
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="races/fee/fee.css">
+    <link rel="icon" type="image/ico" href="images/icon.ico">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <div class="magic-background">
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <div class="sparkle"></div>
+        <div class="magic-orb orb1"></div>
+        <div class="magic-orb orb2"></div>
+        <div class="magic-orb orb3"></div>
+        <div class="magic-orb orb4"></div>
+    </div>
+
+    <main class="race-content">
+        <div class="race-header">
+            <h1 class="race-title">Fée</h1>
+            <p class="race-subtitle">Quand les plantes donnent leur amour...</p>
+        </div>
+
+        <div class="race-body">
+            <div class="race-image-container">
+                <img src="img/races/fée.jpg" alt="Fée" class="race-image">
+            </div>
+
+            <div class="race-info">
+                <section class="info-section">
+                    <h2>Description</h2>
+                    <p>Les Fées sont un peuple vivant dans la pleine féerique qui se situe non loin de Galadhbo. Ces dernières ont tendance à être très méfiantes vis-à -vis des autres peuples à l'exception des Elfes lumineux. Elles sont contre la violence. Elles se démarquent par leurs ailes de papillons ou autres insectes. <br><br>
+                        Ces êtres vivent dans la plaine féérique, peuvent voler et changer de taille à volonté.</p>
+                </section>
+
+                <section class="info-section">
+                    <h2>Attributs de Race</h2>
+                    <ul>
+                        <li>Capacité de pouvoir voler.</li>
+                        <li>Peuvent utiliser la magie des plantes.</li>
+                        <li>Peuvent changer de taille à volonté (entre 15cm et 180cm).</li>
+                    </ul>
+                </section>
+
+                <section class="info-section">
+                    <h2>Histoire</h2>
+                    <p>Les Fées ont pendant longtemps été réduites en esclavage par différents peuples et même dévorée par les démons. Après la libération assez récente de ce peuple, elles sont devenues naturellement très peureuses vis-à -vis des étrangers, même si ceux-ci ne sont pas dangereux. Ce peuple se méfie particulièrement des humains qui les ont réduit en esclavage et des Magmariens depuis que l'un d'entre eux à brûlé leur petite ville.</p>
+                </section>
+
+                <section class="info-section">
+                    <h2>Espérance de Vie</h2>
+                    <p>60 ans</p>
+                </section>
+            </div>
+        </div>
+
+        <a href="race.html" class="back-button">← Retour aux Races</a>
+    </main>
+
+    <script>
+    fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar-placeholder').innerHTML = data;
+            
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            if (hamburger) {
+                hamburger.addEventListener('click', () => {
+                    navMenu.classList.toggle('active');
+                });
+            }
+            
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                });
+            });
+        });
+    </script>
+    <script src="fee.js"></script>
+</body>
+
+</html>
+
+

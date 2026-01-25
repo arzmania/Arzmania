@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arzmania - Magmarien</title>
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="races/magmarien/magmarien.css">
+    <link rel="icon" type="image/ico" href="images/icon.ico">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <div class="fire-background">
+        <div class="flame"></div>
+        <div class="flame"></div>
+        <div class="flame"></div>
+        <div class="flame"></div>
+        <div class="flame"></div>
+        <div class="flame"></div>
+        <div class="flame"></div>
+        <div class="flame"></div>
+        <div class="ember"></div>
+        <div class="ember"></div>
+        <div class="ember"></div>
+        <div class="ember"></div>
+        <div class="ember"></div>
+        <div class="ember"></div>
+        <div class="ember"></div>
+        <div class="ember"></div>
+        <div class="ember"></div>
+        <div class="ember"></div>
+    </div>
+
+    <main class="race-content">
+        <div class="race-header">
+            <h1 class="race-title">Magmarien</h1>
+            <p class="race-subtitle">Aussi ardents et chauds que la flamme...</p>
+        </div>
+
+        <div class="race-body">
+            <div class="race-image-container">
+                <img src="img/races/magmarien.jpg" alt="Magmarien" class="race-image">
+            </div>
+
+            <div class="race-info">
+                <section class="info-section">
+                    <h2>Description</h2>
+                    <p>Les Magmariens vivent dans les volcans de Rogrok. Sauf certains courageux ou rebelles, aucun ne se montre aux autres races depuis la grande guerre. Ils se démarquent par leurs yeux oranges ou rouges flammes. <br><br>
+                        Ce sont des êtres vivants ayant de la force et des capacités de maîtrise de feu.</p>
+                </section>
+
+                <section class="info-section">
+                    <h2>Attributs de Race</h2>
+                    <ul>
+                        <li>Une résistance au feu.</li>
+                        <li>Une régénération dans la lave supérieure à 1000°C.</li>
+                        <li>Maîtrise des flammes pour les élites des guerriers.</li>
+                        <li>Des blessures quand ils sont en contact avec de l'eau.</li>
+                    </ul>
+                </section>
+
+                <section class="info-section">
+                    <h2>Histoire</h2>
+                    <p>Le peuple Magmarien est un peuple guerrier anarchiste régi par un code d'honneur strict que nul ne doit entraver. Ainsi les Magmariens restent, malgré leur système politique, un peuple droit qui respecte autrui. <br><br>
+                    Le code d'honneur du peuple Magmarien leur interdit de :</p>
+                    <ul>
+                        <li>Considérez une espèce comme inférieure à la sienne.</li>
+                        <li>Enlever leurs armes et leurs équipements, les armes font partie intégrantes de leurs corps.</li>
+                        <li>Tuer quelqu'un quand celui-ci ne menace pas sa propre vie ou celle d'autrui.</li>
+                        <li>Fuir devant un ennemi, il faut garder une certaine fierté Magmarienne.</li>
+                        <li>Imposer le code d'honneur à un non Magmarien.</li>
+                    </ul>
+                    <p>Malgré tout ce code d'honneur, les Magmariens ne sont pas très appréciés des autres peuples qui juge les individus de cette race comme des barbares agressifs et dangereux du fait de leur passion envers le combat. Il existe donc une certaine haine envers les Magmariens. <br><br>
+                    Ils sont toutefois reconnus pour leurs bains et leurs talents de forgerons hors pair.</p>
+                </section>
+
+                <section class="info-section">
+                    <h2>Espérance de Vie</h2>
+                    <p>300 ans</p>
+                </section>
+            </div>
+        </div>
+
+        <a href="race.html" class="back-button">← Retour aux Races</a>
+    </main>
+
+    <script>
+fetch('navbar.html')
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
+        
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        if (hamburger) {
+            hamburger.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+        }
+        
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+    });
+</script>
+    <script src="magmarien.js"></script>
+</body>
+
+</html>
+
+

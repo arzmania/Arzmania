@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arzmania - Ondin</title>
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="races/ondin/ondin.css">
+    <link rel="icon" type="image/ico" href="images/icon.ico">
+</head>
+<body>
+    <canvas id="waterTransition"></canvas>
+    <div id="navbar-placeholder"></div>
+
+    <div class="water-background">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="wave wave1"></div>
+        <div class="wave wave2"></div>
+        <div class="wave wave3"></div>
+    </div>
+
+    <main class="race-content">
+        <div class="race-header">
+            <h1 class="race-title">Ondin</h1>
+            <p class="race-subtitle">Les Seigneurs des Mers et Océans...</p>
+        </div>
+
+        <div class="race-body">
+            <div class="race-image-container">
+                <img src="img/races/ondin.jpg" alt="Ondin" class="race-image">
+            </div>
+
+            <div class="race-info">
+                <section class="info-section">
+                    <h2>Description</h2>
+                    <p>Les Ondins sont des êtres aquatiques vivant sur et sous l'océan d'Azurastri. Ils sont assez faciles à approcher et sont plutôt amicaux. Ils peuvent être d'une grande aide. Ils se démarquent par leur peau écailleuse et leurs pseudo nageoires. <br><br>
+                        Ces êtres vivants peuvent vivre sous l'eau et à la surface.</p>
+                </section>
+
+                <section class="info-section">
+                    <h2>Attributs de Race</h2>
+                    <ul>
+                        <li>Maîtrise de l'eau sous toutes ses formes.</li>
+                        <li>Respiration aquatique illimitée.</li>
+                        <li>Communication avec les créatures marines.</li>
+                        <li>Un bon maniement du trident.</li>
+                    </ul>
+                </section>
+
+                <section class="info-section">
+                    <h2>Histoire</h2>
+                    <p>Les Ondins sont à la base un peuple complètement aquatique qui vivait dans l'océan Arzmanien et la mer des Léviathans. Cependant, les Ondins étendent leur commerce en construisant la ville commerciale de Lin. À travers les générations, tous les Ondins ont ainsi oublié leurs origines et vivent principalement à la surface, dans leur ville. Le peuple Ondin est ainsi un peuple vivant du commerce et dirigé par un haut conseil de sages Ondins.</p>
+                </section>
+
+                <section class="info-section">
+                    <h2>Espérance de Vie</h2>
+                    <p>70 ans</p>
+                </section>
+            </div>
+        </div>
+
+        <a href="race.html" class="back-button">← Retour aux Races</a>
+    </main>
+
+    <script>
+    fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar-placeholder').innerHTML = data;
+            
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            if (hamburger) {
+                hamburger.addEventListener('click', () => {
+                    navMenu.classList.toggle('active');
+                });
+            }
+            
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                });
+            });
+        });
+    </script>
+    <script src="ondin.js"></script>
+</body>
+
+</html>
+
+
