@@ -166,56 +166,6 @@ body {
     animation: fadeOut 3s forwards;
 }
 
-.transition-humain {
-    background: radial-gradient(circle, rgba(255,255,255,0.1), #0a0a0a);
-}
-
-.transition-elfel {
-    background: radial-gradient(circle, #ffd700, #fff);
-    animation: blinding 2s forwards;
-}
-
-.transition-elfeo {
-    background: radial-gradient(circle, #1a0033, #000);
-    animation: darkPulse 2.5s forwards;
-}
-
-.transition-fee {
-    background: linear-gradient(45deg, #ff69b4, #ba55d3, #00ffff, #ff1493);
-    background-size: 400% 400%;
-    animation: magicSwirl 2.5s forwards;
-}
-
-.transition-magmarien {
-    background: radial-gradient(circle, #ff4500, #8b0000, #000);
-    animation: fireExplosion 2.5s forwards;
-}
-
-.transition-ondin {
-    background: radial-gradient(circle, #00bfff, #1e90ff, #000080);
-    animation: waterRipple 2.5s forwards;
-}
-
-.transition-golem {
-    background: radial-gradient(circle, #00ffff, #87ceeb, #4682b4);
-    animation: iceShatter 2.5s forwards;
-}
-
-.transition-stryx {
-    background: linear-gradient(90deg, transparent, #90ee90, transparent);
-    animation: windSweep 2s forwards;
-}
-
-.transition-nazgul {
-    background: radial-gradient(circle, rgba(100, 0, 150, 0.8), #000);
-    animation: spectralVoid 3s forwards;
-}
-
-.transition-demon {
-    background: radial-gradient(circle, #8b0000, #000);
-    animation: bloodRush 2.5s forwards;
-}
-
 @keyframes fadeOut {
     0% { opacity: 1; }
     70% { opacity: 1; }
