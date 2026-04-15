@@ -23,6 +23,7 @@
     color: #ab2ffd;
     text-shadow: 0 0 10px rgba(252, 0, 0, 0.5);
     cursor: pointer;
+    text-decoration: none;
 }
 
 .nav-menu {
