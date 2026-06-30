@@ -1,0 +1,313 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(180deg, #1a1410, #0f0a05, #1a1410);
+    color: #e0e0e0;
+    line-height: 1.6;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.human-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.light-particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: radial-gradient(circle, #d4af37, #b8860b);
+    border-radius: 50%;
+    animation: floatParticle 8s infinite ease-in-out;
+    box-shadow: 0 0 10px #d4af37;
+}
+
+.light-particle:nth-child(1) {
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+    animation-duration: 7s;
+}
+
+.light-particle:nth-child(2) {
+    top: 40%;
+    left: 30%;
+    animation-delay: 1.5s;
+    animation-duration: 8.5s;
+}
+
+.light-particle:nth-child(3) {
+    top: 60%;
+    left: 50%;
+    animation-delay: 3s;
+    animation-duration: 7.8s;
+}
+
+.light-particle:nth-child(4) {
+    top: 80%;
+    left: 70%;
+    animation-delay: 4.5s;
+    animation-duration: 8.2s;
+}
+
+.light-particle:nth-child(5) {
+    top: 30%;
+    left: 80%;
+    animation-delay: 2s;
+    animation-duration: 7.5s;
+}
+
+.light-particle:nth-child(6) {
+    top: 50%;
+    left: 20%;
+    animation-delay: 3.5s;
+    animation-duration: 8s;
+}
+
+.light-particle:nth-child(7) {
+    top: 70%;
+    left: 40%;
+    animation-delay: 1s;
+    animation-duration: 7.2s;
+}
+
+.light-particle:nth-child(8) {
+    top: 15%;
+    left: 60%;
+    animation-delay: 5s;
+    animation-duration: 8.8s;
+}
+
+@keyframes floatParticle {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.3;
+    }
+    25% {
+        transform: translate(30px, -40px) scale(1.2);
+        opacity: 0.6;
+    }
+    50% {
+        transform: translate(-20px, -80px) scale(0.8);
+        opacity: 0.8;
+    }
+    75% {
+        transform: translate(40px, -60px) scale(1.1);
+        opacity: 0.5;
+    }
+}
+
+.amber-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    animation: amberPulse 10s infinite ease-in-out;
+}
+
+.glow1 {
+    top: 20%;
+    left: 15%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.2), transparent);
+    animation-delay: 0s;
+}
+
+.glow2 {
+    top: 55%;
+    right: 20%;
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, rgba(184, 134, 11, 0.15), transparent);
+    animation-delay: 3s;
+}
+
+.glow3 {
+    bottom: 25%;
+    left: 40%;
+    width: 280px;
+    height: 280px;
+    background: radial-gradient(circle, rgba(205, 160, 40, 0.18), transparent);
+    animation-delay: 6s;
+}
+
+@keyframes amberPulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.2;
+    }
+    50% {
+        transform: scale(1.3);
+        opacity: 0.4;
+    }
+}
+
+.race-content {
+    position: relative;
+    z-index: 2;
+    margin-top: 100px;
+    padding: 2rem;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.race-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: rgba(212, 175, 55, 0.15);
+    border-radius: 15px;
+    border: 2px solid #d4af37;
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
+}
+
+.race-title {
+    font-size: 4rem;
+    color: #d4af37;
+    text-shadow: 
+        0 0 20px #b8860b,
+        0 0 40px #d4af37,
+        0 0 60px #daa520,
+        2px 2px 10px rgba(0, 0, 0, 0.8);
+    margin-bottom: 1rem;
+    font-weight: bold;
+    animation: humanGlow 3s infinite;
+}
+
+@keyframes humanGlow {
+    0%, 100% {
+        text-shadow: 
+            0 0 20px #b8860b,
+            0 0 40px #d4af37,
+            0 0 60px #daa520,
+            2px 2px 10px rgba(0, 0, 0, 0.8);
+        filter: brightness(1);
+    }
+    50% {
+        text-shadow: 
+            0 0 30px #b8860b,
+            0 0 60px #d4af37,
+            0 0 90px #daa520,
+            2px 2px 10px rgba(0, 0, 0, 0.8);
+        filter: brightness(1.2);
+    }
+}
+
+.race-subtitle {
+    font-size: 1.5rem;
+    color: #daa520;
+    font-style: italic;
+}
+
+.race-body {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.race-image-container {
+    position: sticky;
+    top: 120px;
+    height: fit-content;
+}
+
+.race-image {
+    width: 100%;
+    border-radius: 15px;
+    border: 3px solid #d4af37;
+    box-shadow: 0 10px 40px rgba(212, 175, 55, 0.4);
+}
+
+.race-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.info-section {
+    background: rgba(26, 20, 16, 0.7);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 2px solid rgba(212, 175, 55, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.info-section h2 {
+    color: #d4af37;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px #b8860b;
+}
+
+.info-section p {
+    color: #e0e0e0;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+.info-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.info-section ul li {
+    padding: 0.8rem;
+    margin-bottom: 0.5rem;
+    background: rgba(212, 175, 55, 0.1);
+    border-left: 4px solid #d4af37;
+    border-radius: 5px;
+}
+
+.info-section ul li strong {
+    color: #daa520;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: rgba(212, 175, 55, 0.2);
+    color: #d4af37;
+    text-decoration: none;
+    border: 2px solid #d4af37;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.back-button:hover {
+    background: #d4af37;
+    color: #1a1410;
+    box-shadow: 0 0 20px #d4af37;
+    transform: translateX(-5px);
+}
+
+@media (max-width: 768px) {
+    .race-title {
+        font-size: 2.5rem;
+    }
+
+    .race-body {
+        grid-template-columns: 1fr;
+    }
+
+    .race-image-container {
+        position: relative;
+        top: 0;
+    }
+}

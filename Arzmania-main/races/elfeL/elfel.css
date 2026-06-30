@@ -1,0 +1,331 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #fff8dc, #fffacd, #fff8dc);
+    color: #2a2a2a;
+    line-height: 1.6;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.light-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.light-ray {
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, rgba(255, 215, 0, 0.3), transparent);
+    animation: rayShine 8s infinite ease-in-out;
+}
+
+.light-ray:nth-child(1) {
+    left: 20%;
+    animation-delay: 0s;
+}
+
+.light-ray:nth-child(2) {
+    left: 45%;
+    animation-delay: 2s;
+}
+
+.light-ray:nth-child(3) {
+    left: 70%;
+    animation-delay: 4s;
+}
+
+.light-ray:nth-child(4) {
+    left: 85%;
+    animation-delay: 6s;
+}
+
+@keyframes rayShine {
+    0%, 100% {
+        opacity: 0.2;
+        transform: scaleY(0.8);
+    }
+    50% {
+        opacity: 0.5;
+        transform: scaleY(1);
+    }
+}
+
+.light-particle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: radial-gradient(circle, #ffd700, transparent);
+    border-radius: 50%;
+    animation: particleFloat 6s infinite ease-in-out;
+    box-shadow: 0 0 15px #ffd700, 0 0 30px #ffa500;
+}
+
+.light-particle:nth-child(5) {
+    top: 20%;
+    left: 15%;
+    animation-delay: 0s;
+}
+
+.light-particle:nth-child(6) {
+    top: 40%;
+    left: 60%;
+    animation-delay: 1s;
+}
+
+.light-particle:nth-child(7) {
+    top: 60%;
+    left: 30%;
+    animation-delay: 2s;
+}
+
+.light-particle:nth-child(8) {
+    top: 75%;
+    left: 80%;
+    animation-delay: 3s;
+}
+
+.light-particle:nth-child(9) {
+    top: 30%;
+    left: 85%;
+    animation-delay: 1.5s;
+}
+
+.light-particle:nth-child(10) {
+    top: 50%;
+    left: 10%;
+    animation-delay: 2.5s;
+}
+
+.light-particle:nth-child(11) {
+    top: 70%;
+    left: 55%;
+    animation-delay: 0.5s;
+}
+
+.light-particle:nth-child(12) {
+    top: 85%;
+    left: 40%;
+    animation-delay: 3.5s;
+}
+
+@keyframes particleFloat {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+        opacity: 0.4;
+    }
+    50% {
+        transform: translateY(-40px) scale(1.3);
+        opacity: 0.8;
+    }
+}
+
+.glow-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(50px);
+    animation: orbGlow 10s infinite ease-in-out;
+}
+
+.orb1 {
+    top: 15%;
+    left: 25%;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(255, 215, 0, 0.3), transparent);
+    animation-delay: 0s;
+}
+
+.orb2 {
+    top: 55%;
+    right: 20%;
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(255, 223, 0, 0.25), transparent);
+    animation-delay: 3s;
+}
+
+.orb3 {
+    bottom: 20%;
+    left: 40%;
+    width: 180px;
+    height: 180px;
+    background: radial-gradient(circle, rgba(255, 200, 50, 0.3), transparent);
+    animation-delay: 6s;
+}
+
+@keyframes orbGlow {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.4;
+    }
+    50% {
+        transform: translate(20px, -20px) scale(1.2);
+        opacity: 0.7;
+    }
+}
+
+.race-content {
+    position: relative;
+    z-index: 2;
+    margin-top: 100px;
+    padding: 2rem;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.race-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: rgba(255, 223, 0, 0.15);
+    border-radius: 15px;
+    border: 2px solid #ffd700;
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.4);
+}
+
+.race-title {
+    font-size: 4rem;
+    color: #daa520;
+    text-shadow: 
+        0 0 20px #ffd700,
+        0 0 40px #ffec8b,
+        2px 2px 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 1rem;
+    font-weight: bold;
+    animation: lightGlow 2.5s infinite;
+}
+
+@keyframes lightGlow {
+    0%, 100% {
+        text-shadow: 
+            0 0 20px #ffd700,
+            0 0 40px #ffec8b,
+            2px 2px 10px rgba(0, 0, 0, 0.3);
+        filter: brightness(1);
+    }
+    50% {
+        text-shadow: 
+            0 0 30px #ffd700,
+            0 0 60px #ffec8b,
+            0 0 80px #ffa500,
+            2px 2px 10px rgba(0, 0, 0, 0.3);
+        filter: brightness(1.2);
+    }
+}
+
+.race-subtitle {
+    font-size: 1.5rem;
+    color: #daa520;
+    font-style: italic;
+}
+
+.race-body {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.race-image-container {
+    position: sticky;
+    top: 120px;
+    height: fit-content;
+}
+
+.race-image {
+    width: 100%;
+    border-radius: 15px;
+    border: 3px solid #ffd700;
+    box-shadow: 0 10px 40px rgba(255, 215, 0, 0.5);
+}
+
+.race-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.info-section {
+    background: rgba(255, 250, 205, 0.7);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 2px solid rgba(255, 215, 0, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+.info-section h2 {
+    color: #daa520;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.info-section p {
+    color: #2a2a2a;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+.info-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.info-section ul li {
+    padding: 0.8rem;
+    margin-bottom: 0.5rem;
+    background: rgba(255, 215, 0, 0.15);
+    border-left: 4px solid #ffd700;
+    border-radius: 5px;
+    color: #2a2a2a;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: rgba(255, 215, 0, 0.2);
+    color: #daa520;
+    text-decoration: none;
+    border: 2px solid #ffd700;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.back-button:hover {
+    background: #ffd700;
+    color: #2a2a2a;
+    box-shadow: 0 0 20px #ffd700;
+    transform: translateX(-5px);
+}
+
+@media (max-width: 768px) {
+    .race-title {
+        font-size: 2.5rem;
+    }
+
+    .race-body {
+        grid-template-columns: 1fr;
+    }
+
+    .race-image-container {
+        position: relative;
+        top: 0;
+    }
+}

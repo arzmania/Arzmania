@@ -1,0 +1,331 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(180deg, #1a0000, #0a0000, #1a0000);
+    color: #e0e0e0;
+    line-height: 1.6;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.demonic-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.blood-drop {
+    position: absolute;
+    top: -20px;
+    width: 8px;
+    height: 20px;
+    background: linear-gradient(180deg, #8b0000, #4d0000);
+    border-radius: 0 0 50% 50%;
+    animation: bloodFall 6s infinite linear;
+    opacity: 0.7;
+}
+
+.blood-drop:nth-child(1) {
+    left: 15%;
+    animation-delay: 0s;
+    animation-duration: 5.5s;
+}
+
+.blood-drop:nth-child(2) {
+    left: 35%;
+    animation-delay: 1.5s;
+    animation-duration: 6.2s;
+}
+
+.blood-drop:nth-child(3) {
+    left: 55%;
+    animation-delay: 3s;
+    animation-duration: 5.8s;
+}
+
+.blood-drop:nth-child(4) {
+    left: 75%;
+    animation-delay: 4.5s;
+    animation-duration: 6s;
+}
+
+.blood-drop:nth-child(5) {
+    left: 25%;
+    animation-delay: 2s;
+    animation-duration: 5.6s;
+}
+
+.blood-drop:nth-child(6) {
+    left: 85%;
+    animation-delay: 0.8s;
+    animation-duration: 6.4s;
+}
+
+@keyframes bloodFall {
+    0% {
+        top: -20px;
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.7;
+    }
+    90% {
+        opacity: 0.5;
+    }
+    100% {
+        top: 110vh;
+        opacity: 0;
+    }
+}
+
+.dark-flame {
+    position: absolute;
+    bottom: -50px;
+    width: 40px;
+    height: 80px;
+    background: linear-gradient(180deg, transparent, #8b0000, #000);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    animation: darkBurn 4s infinite ease-in-out;
+    filter: blur(5px);
+    opacity: 0.6;
+}
+
+.dark-flame:nth-child(7) {
+    left: 20%;
+    animation-delay: 0s;
+}
+
+.dark-flame:nth-child(8) {
+    left: 50%;
+    animation-delay: 1s;
+}
+
+.dark-flame:nth-child(9) {
+    left: 75%;
+    animation-delay: 2s;
+}
+
+.dark-flame:nth-child(10) {
+    left: 35%;
+    animation-delay: 0.5s;
+}
+
+@keyframes darkBurn {
+    0%, 100% {
+        transform: translateY(0) scaleY(1);
+        opacity: 0.4;
+    }
+    50% {
+        transform: translateY(-60px) scaleY(1.3);
+        opacity: 0.7;
+    }
+}
+
+.infernal-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    animation: infernalPulse 8s infinite ease-in-out;
+}
+
+.glow1 {
+    top: 25%;
+    left: 15%;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(139, 0, 0, 0.4), transparent);
+    animation-delay: 0s;
+}
+
+.glow2 {
+    top: 60%;
+    right: 20%;
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(100, 0, 0, 0.3), transparent);
+    animation-delay: 2.5s;
+}
+
+.glow3 {
+    bottom: 30%;
+    left: 40%;
+    width: 180px;
+    height: 180px;
+    background: radial-gradient(circle, rgba(80, 0, 0, 0.4), transparent);
+    animation-delay: 5s;
+}
+
+@keyframes infernalPulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.3;
+    }
+    50% {
+        transform: scale(1.3);
+        opacity: 0.6;
+    }
+}
+
+.race-content {
+    position: relative;
+    z-index: 2;
+    margin-top: 100px;
+    padding: 2rem;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.race-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: rgba(139, 0, 0, 0.3);
+    border-radius: 15px;
+    border: 2px solid #8b0000;
+    box-shadow: 0 0 30px rgba(139, 0, 0, 0.5);
+}
+
+.race-title {
+    font-size: 4rem;
+    color: #dc143c;
+    text-shadow: 
+        0 0 20px #8b0000,
+        0 0 40px #b22222,
+        0 0 60px #ff0000,
+        2px 2px 10px rgba(0, 0, 0, 0.8);
+    margin-bottom: 1rem;
+    font-weight: bold;
+    animation: demonicGlow 2s infinite;
+}
+
+@keyframes demonicGlow {
+    0%, 100% {
+        text-shadow: 
+            0 0 20px #8b0000,
+            0 0 40px #b22222,
+            0 0 60px #ff0000,
+            2px 2px 10px rgba(0, 0, 0, 0.8);
+        filter: brightness(1);
+    }
+    50% {
+        text-shadow: 
+            0 0 30px #8b0000,
+            0 0 60px #b22222,
+            0 0 90px #ff0000,
+            2px 2px 10px rgba(0, 0, 0, 0.8);
+        filter: brightness(1.3);
+    }
+}
+
+.race-subtitle {
+    font-size: 1.5rem;
+    color: #cd5c5c;
+    font-style: italic;
+}
+
+.race-body {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.race-image-container {
+    position: sticky;
+    top: 120px;
+    height: fit-content;
+}
+
+.race-image {
+    width: 100%;
+    border-radius: 15px;
+    border: 3px solid #8b0000;
+    box-shadow: 0 10px 40px rgba(139, 0, 0, 0.6);
+}
+
+.race-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.info-section {
+    background: rgba(26, 0, 0, 0.7);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 2px solid rgba(139, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+}
+
+.info-section h2 {
+    color: #dc143c;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px #8b0000;
+}
+
+.info-section p {
+    color: #e0e0e0;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+.info-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.info-section ul li {
+    padding: 0.8rem;
+    margin-bottom: 0.5rem;
+    background: rgba(139, 0, 0, 0.15);
+    border-left: 4px solid #8b0000;
+    border-radius: 5px;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: rgba(139, 0, 0, 0.2);
+    color: #dc143c;
+    text-decoration: none;
+    border: 2px solid #8b0000;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.back-button:hover {
+    background: #8b0000;
+    color: #e0e0e0;
+    box-shadow: 0 0 20px #8b0000;
+    transform: translateX(-5px);
+}
+
+@media (max-width: 768px) {
+    .race-title {
+        font-size: 2.5rem;
+    }
+
+    .race-body {
+        grid-template-columns: 1fr;
+    }
+
+    .race-image-container {
+        position: relative;
+        top: 0;
+    }
+}
