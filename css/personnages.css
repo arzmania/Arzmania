@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(180deg, #0a0a1a, #1a1a2e);
+    color: #e0e0e0;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.personnages-hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, rgba(171, 47, 253, 0.2), rgba(26, 26, 46, 0.8));
+    border-bottom: 3px solid #ab2ffd;
+}
+
+.personnages-hero h1 {
+    font-size: 3.5rem;
+    color: #ab2ffd;
+    text-shadow: 0 0 30px #ab2ffd;
+    margin-bottom: 1rem;
+    animation: glow 2s ease-in-out infinite;
+}
+
+.personnages-hero p {
+    font-size: 1.3rem;
+    color: #c0c0c0;
+}
+
+@keyframes glow {
+    0%, 100% { text-shadow: 0 0 30px #ab2ffd; }
+    50% { text-shadow: 0 0 50px #ab2ffd, 0 0 70px #ab2ffd; }
+}
+
+.heroes-section {
+    padding: 4rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.heroes-section h2 {
+    font-size: 2.5rem;
+    color: #ab2ffd;
+    text-align: center;
+    margin-bottom: 3rem;
+    text-shadow: 0 0 20px #ab2ffd;
+}
+
+.heroes-grid {
+    display: grid;
+    gap: 2rem;
+}
+
+.hero-card {
+    background: rgba(26, 26, 46, 0.8);
+    border-radius: 15px;
+    overflow: hidden;
+    border: 2px solid #ab2ffd;
+    display: flex;
+    flex-direction: row;
+    transition: all 0.3s;
+    box-shadow: 0 0 20px rgba(171, 47, 253, 0.3);
+}
+
+.hero-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 40px rgba(171, 47, 253, 0.6);
+    border-color: #d65fff;
+}
+
+.hero-image {
+    flex-shrink: 0;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    background: rgba(171, 47, 253, 0.1);
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.hero-card:hover .hero-image img {
+    transform: scale(1.1);
+}
+
+.hero-content {
+    padding: 2rem;
+    flex: 1;
+}
+
+.hero-content h3 {
+    font-size: 2rem;
+    color: #ab2ffd;
+    margin-bottom: 0.5rem;
+}
+
+.hero-title {
+    font-size: 1.2rem;
+    color: #ffd700;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+.hero-race {
+    font-size: 1rem;
+    color: #9370db;
+    margin-bottom: 1rem;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #c0c0c0;
+}
+
+.council-section {
+    padding: 4rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    background: rgba(171, 47, 253, 0.05);
+    border-radius: 20px;
+}
+
+.council-section h2 {
+    font-size: 2.5rem;
+    color: #ab2ffd;
+    text-align: center;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 20px #ab2ffd;
+}
+
+.council-intro {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #c0c0c0;
+    margin-bottom: 3rem;
+}
+
+.council-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+}
+
+.council-card {
+    background: rgba(26, 26, 46, 0.8);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    border: 2px solid #ab2ffd;
+    transition: all 0.3s;
+    box-shadow: 0 0 15px rgba(171, 47, 253, 0.2);
+}
+
+.council-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px rgba(171, 47, 253, 0.5);
+    border-color: #d65fff;
+}
+
+.council-portrait {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #ab2ffd;
+    box-shadow: 0 0 20px rgba(171, 47, 253, 0.5);
+}
+
+.council-portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.council-card h3 {
+    font-size: 1.5rem;
+    color: #ab2ffd;
+    margin-bottom: 0.5rem;
+}
+
+.council-role {
+    font-size: 1.1rem;
+    color: #ffd700;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+.council-race {
+    font-size: 0.9rem;
+    color: #9370db;
+    margin-bottom: 1rem;
+}
+
+.council-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #c0c0c0;
+}
+
+@media (max-width: 768px) {
+    .personnages-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-card {
+        flex-direction: column;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: 250px;
+    }
+
+    .council-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+}

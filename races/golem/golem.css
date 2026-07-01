@@ -1,0 +1,338 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(180deg, #0a1a2e, #050510);
+    color: #e0e0e0;
+    line-height: 1.6;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+
+.ice-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.snowflake {
+    position: absolute;
+    top: -10px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.9), rgba(200, 240, 255, 0.6), transparent);
+    border-radius: 50%;
+    animation: fall linear infinite;
+    opacity: 0.8;
+}
+
+.snowflake:nth-child(1) {
+    left: 10%;
+    width: 8px;
+    height: 8px;
+    animation-duration: 10s;
+    animation-delay: 0s;
+}
+
+.snowflake:nth-child(2) {
+    left: 25%;
+    width: 6px;
+    height: 6px;
+    animation-duration: 12s;
+    animation-delay: 2s;
+}
+
+.snowflake:nth-child(3) {
+    left: 40%;
+    width: 10px;
+    height: 10px;
+    animation-duration: 9s;
+    animation-delay: 4s;
+}
+
+.snowflake:nth-child(4) {
+    left: 55%;
+    width: 7px;
+    height: 7px;
+    animation-duration: 11s;
+    animation-delay: 1s;
+}
+
+.snowflake:nth-child(5) {
+    left: 70%;
+    width: 9px;
+    height: 9px;
+    animation-duration: 10s;
+    animation-delay: 3s;
+}
+
+.snowflake:nth-child(6) {
+    left: 85%;
+    width: 5px;
+    height: 5px;
+    animation-duration: 13s;
+    animation-delay: 5s;
+}
+
+.snowflake:nth-child(7) {
+    left: 15%;
+    width: 8px;
+    height: 8px;
+    animation-duration: 11s;
+    animation-delay: 6s;
+}
+
+.snowflake:nth-child(8) {
+    left: 60%;
+    width: 6px;
+    height: 6px;
+    animation-duration: 12s;
+    animation-delay: 1.5s;
+}
+
+.snowflake:nth-child(9) {
+    left: 35%;
+    width: 9px;
+    height: 9px;
+    animation-duration: 10s;
+    animation-delay: 3.5s;
+}
+
+.snowflake:nth-child(10) {
+    left: 80%;
+    width: 7px;
+    height: 7px;
+    animation-duration: 11s;
+    animation-delay: 2.5s;
+}
+
+@keyframes fall {
+    0% {
+        top: -10px;
+        transform: translateX(0) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.8;
+    }
+    90% {
+        opacity: 0.6;
+    }
+    100% {
+        top: 110vh;
+        transform: translateX(100px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.crystal {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, rgba(100, 200, 255, 0.3), rgba(200, 240, 255, 0.1));
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    animation: crystalFloat 6s infinite ease-in-out;
+    opacity: 0.4;
+    filter: blur(2px);
+}
+
+.crystal1 {
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.crystal2 {
+    top: 50%;
+    right: 15%;
+    animation-delay: 2s;
+    width: 120px;
+    height: 120px;
+}
+
+.crystal3 {
+    bottom: 25%;
+    left: 20%;
+    animation-delay: 4s;
+    width: 80px;
+    height: 80px;
+}
+
+.crystal4 {
+    top: 70%;
+    right: 25%;
+    animation-delay: 1s;
+    width: 90px;
+    height: 90px;
+}
+
+@keyframes crystalFloat {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.3;
+    }
+    50% {
+        transform: translateY(-30px) rotate(180deg);
+        opacity: 0.5;
+    }
+}
+
+.race-content {
+    position: relative;
+    z-index: 2;
+    margin-top: 100px;
+    padding: 2rem;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.race-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: rgba(100, 200, 255, 0.15);
+    border-radius: 15px;
+    border: 2px solid #00ffff;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.4);
+}
+
+.race-title {
+    font-size: 4rem;
+    color: #00ffff;
+    text-shadow: 
+        0 0 20px #00ffff,
+        0 0 40px #87ceeb,
+        2px 2px 10px rgba(0, 0, 0, 0.8);
+    margin-bottom: 1rem;
+    font-weight: bold;
+    animation: iceGlow 4s infinite;
+}
+
+@keyframes iceGlow {
+    0%, 100% {
+        text-shadow: 
+            0 0 20px #00ffff,
+            0 0 40px #87ceeb,
+            2px 2px 10px rgba(0, 0, 0, 0.8);
+        filter: brightness(1);
+    }
+    50% {
+        text-shadow: 
+            0 0 30px #00ffff,
+            0 0 60px #87ceeb,
+            0 0 80px #4682b4,
+            2px 2px 10px rgba(0, 0, 0, 0.8);
+        filter: brightness(1.2);
+    }
+}
+
+.race-subtitle {
+    font-size: 1.5rem;
+    color: #b0e0e6;
+    font-style: italic;
+}
+
+.race-body {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.race-image-container {
+    position: sticky;
+    top: 120px;
+    height: fit-content;
+}
+
+.race-image {
+    width: 100%;
+    border-radius: 15px;
+    border: 3px solid #00ffff;
+    box-shadow: 0 10px 40px rgba(0, 255, 255, 0.5);
+}
+
+.race-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.info-section {
+    background: rgba(10, 26, 46, 0.7);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 2px solid rgba(0, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.info-section h2 {
+    color: #00ffff;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px #00ffff;
+}
+
+.info-section p {
+    color: #e0e0e0;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+.info-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.info-section ul li {
+    padding: 0.8rem;
+    margin-bottom: 0.5rem;
+    background: rgba(0, 255, 255, 0.1);
+    border-left: 4px solid #00ffff;
+    border-radius: 5px;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: rgba(0, 255, 255, 0.2);
+    color: #00ffff;
+    text-decoration: none;
+    border: 2px solid #00ffff;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.back-button:hover {
+    background: #00ffff;
+    color: #050510;
+    box-shadow: 0 0 20px #00ffff;
+    transform: translateX(-5px);
+}
+
+@media (max-width: 768px) {
+    .race-title {
+        font-size: 2.5rem;
+    }
+
+    .race-body {
+        grid-template-columns: 1fr;
+    }
+
+    .race-image-container {
+        position: relative;
+        top: 0;
+    }
+}
