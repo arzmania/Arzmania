@@ -595,97 +595,16 @@ body {
 }
 
 @media (max-width: 768px) {
-    /* Réduire les animations sur mobile pour meilleure performance */
-    .magic-circle,
-    .magic-rune,
-    .magic-orb,
-    .golden-sparkle,
-    .magic-lightning,
-    .magic-wave,
-    .mystic-glow {
-        animation-duration: 0s !important;
-        opacity: 0.15 !important;
-    }
-
-    /* Désactiver les box-shadows complexes sur mobile */
-    .magic-circle {
-        box-shadow: none !important;
-    }
-
-    .magic-rune {
-        text-shadow: 0 0 10px #ffd700 !important;
-        font-size: 1.5rem;
-    }
-
-    .magic-orb {
-        box-shadow: 0 0 15px #ffd700 !important;
-        animation: none !important;
-    }
-
-    .golden-sparkle {
-        box-shadow: 0 0 8px #ffd700 !important;
-        animation: none !important;
-    }
-
-    .magic-lightning {
-        box-shadow: 0 0 10px #ffd700 !important;
-        animation: none !important;
-    }
-
-    .magic-wave {
-        animation: none !important;
-        opacity: 0.1 !important;
-    }
-
-    .mystic-glow {
-        animation: none !important;
-        filter: blur(40px) !important;
-        opacity: 0.2 !important;
-    }
-
     .race-title {
-        font-size: 2rem;
-        text-shadow: 0 0 10px #daa520 !important;
+        font-size: 2.5rem;
     }
 
-    .race-title {
-        animation: none !important;
+    .race-body {
+        grid-template-columns: 1fr;
     }
 
-    .race-header {
-        box-shadow: 0 0 15px rgba(255, 215, 0, 0.2) !important;
-    }
-
-    .race-image {
-        box-shadow: 0 5px 20px rgba(255, 215, 0, 0.3) !important;
-    }
-
-    .info-section {
-        box-shadow: none !important;
-        backdrop-filter: none !important;
-    }
-
-    .info-section ul li {
-        box-shadow: none !important;
+    .race-image-container {
+        position: relative;
+        top: 0;
     }
 }
-
-/* Support pour les appareils qui préfèrent réduire les animations */
-@media (prefers-reduced-motion: reduce) {
-    * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-    }
-
-    .magic-circle,
-    .magic-rune,
-    .magic-orb,
-    .golden-sparkle,
-    .magic-lightning,
-    .magic-wave,
-    .mystic-glow {
-        animation: none !important;
-        opacity: 0.1 !important;
-    }
-}   
