@@ -28,8 +28,9 @@ body {
     position: absolute;
     border: 3px solid #ffd700;
     border-radius: 50%;
-    opacity: 0.3;
-    animation: rotateCircle 20s infinite linear;
+    opacity: 0.2;
+    animation: rotateCircle 30s infinite linear;
+    will-change: transform;
 }
 
 .circle1 {
@@ -38,10 +39,8 @@ body {
     width: 200px;
     height: 200px;
     border-style: dashed;
-    box-shadow: 
-        0 0 30px #ffd700,
-        inset 0 0 30px rgba(255, 215, 0, 0.3);
-    animation-duration: 25s;
+    box-shadow: 0 0 20px #ffd700;
+    animation-duration: 40s;
 }
 
 .circle2 {
@@ -50,10 +49,8 @@ body {
     width: 250px;
     height: 250px;
     border-style: dotted;
-    box-shadow: 
-        0 0 40px #daa520,
-        inset 0 0 40px rgba(218, 165, 32, 0.3);
-    animation-duration: 30s;
+    box-shadow: 0 0 25px #daa520;
+    animation-duration: 50s;
     animation-direction: reverse;
 }
 
@@ -70,11 +67,10 @@ body {
     position: absolute;
     font-size: 3rem;
     color: #ffd700;
-    animation: runeFloat 8s infinite ease-in-out;
-    text-shadow: 
-        0 0 20px #ffd700,
-        0 0 40px #daa520,
-        0 0 60px rgba(255, 215, 0, 0.5);
+    animation: runeFloat 10s infinite ease-in-out;
+    text-shadow: 0 0 15px #ffd700, 0 0 30px #daa520;
+    will-change: transform;
+    opacity: 0.6;
 }
 
 .rune1 {
@@ -128,14 +124,11 @@ body {
     position: absolute;
     width: 15px;
     height: 15px;
-    background: radial-gradient(circle, #fff, #ffd700, #daa520);
+    background: radial-gradient(circle, #ffd700, #daa520);
     border-radius: 50%;
-    animation: magicFloat 12s infinite ease-in-out;
-    box-shadow: 
-        0 0 30px #ffd700,
-        0 0 50px #daa520,
-        0 0 70px rgba(255, 215, 0, 0.7),
-        inset 0 0 15px #fff;
+    animation: magicFloat 15s infinite ease-in-out;
+    box-shadow: 0 0 25px #ffd700;
+    will-change: transform;
 }
 
 .magic-orb:nth-child(7) {
@@ -219,10 +212,10 @@ body {
     height: 4px;
     background: #fff;
     border-radius: 50%;
-    animation: sparkle 6s infinite ease-in-out;
-    box-shadow: 
-        0 0 15px #ffd700,
-        0 0 25px #fff;
+    animation: sparkle 8s infinite ease-in-out;
+    box-shadow: 0 0 12px #ffd700;
+    will-change: transform;
+    opacity: 0.7;
 }
 
 .golden-sparkle:nth-child(15) {
@@ -313,9 +306,10 @@ body {
     width: 2px;
     height: 100px;
     background: linear-gradient(180deg, transparent, #ffd700, #fff, #ffd700, transparent);
-    animation: lightning 4s infinite ease-in-out;
-    filter: blur(1px);
-    box-shadow: 0 0 20px #ffd700;
+    animation: lightning 5s infinite ease-in-out;
+    filter: blur(0.5px);
+    box-shadow: 0 0 15px #ffd700;
+    will-change: opacity;
 }
 
 .magic-lightning:nth-child(27) {
@@ -358,27 +352,17 @@ body {
     position: absolute;
     width: 300px;
     height: 300px;
-    border: 2px solid #ffd700;
+    border: 1px solid #ffd700;
     border-radius: 50%;
-    animation: waveExpand 6s infinite ease-out;
-}
-
-.magic-wave:nth-child(30) {
-    top: 40%;
-    left: 20%;
-    animation-delay: 0s;
-}
-
-.magic-wave:nth-child(31) {
-    top: 60%;
-    right: 25%;
-    animation-delay: 3s;
+    animation: waveExpand 8s infinite ease-out;
+    opacity: 0.5;
+    will-change: transform;
 }
 
 @keyframes waveExpand {
     0% {
         transform: scale(0);
-        opacity: 0.8;
+        opacity: 0.6;
     }
     100% {
         transform: scale(2);
@@ -389,43 +373,44 @@ body {
 .mystic-glow {
     position: absolute;
     border-radius: 50%;
-    filter: blur(90px);
-    animation: mysticPulse 14s infinite ease-in-out;
+    filter: blur(50px);
+    animation: mysticPulse 18s infinite ease-in-out;
+    will-change: opacity;
 }
 
 .glow1 {
     top: 20%;
     left: 20%;
-    width: 450px;
-    height: 450px;
-    background: radial-gradient(circle, rgba(255, 215, 0, 0.4), transparent);
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255, 215, 0, 0.25), transparent);
     animation-delay: 0s;
 }
 
 .glow2 {
     top: 55%;
     right: 15%;
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, rgba(218, 165, 32, 0.35), transparent);
+    width: 280px;
+    height: 280px;
+    background: radial-gradient(circle, rgba(218, 165, 32, 0.2), transparent);
     animation-delay: 4.5s;
 }
 
 .glow3 {
     bottom: 20%;
     left: 45%;
-    width: 420px;
-    height: 420px;
-    background: radial-gradient(circle, rgba(255, 223, 0, 0.38), transparent);
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255, 223, 0, 0.25), transparent);
     animation-delay: 9s;
 }
 
 .glow4 {
     top: 10%;
     right: 30%;
-    width: 380px;
-    height: 380px;
-    background: radial-gradient(circle, rgba(255, 215, 0, 0.3), transparent);
+    width: 270px;
+    height: 270px;
+    background: radial-gradient(circle, rgba(255, 215, 0, 0.2), transparent);
     animation-delay: 2s;
 }
 
