@@ -358,7 +358,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        document.querySelectorAll('*').forEach(el => {
+        document.querySelectorAll('*:not(.cinematic-intro):not(.cinematic-intro *)').forEach(el => {
             el.style.animation = 'none';
             el.style.transition = 'none';
         });
